@@ -1,0 +1,40 @@
+{
+  "source": "IRS Publication; One Big Beautiful Bill Act (signed July 4, 2025); IRS Schedule 8812 Instructions",
+  "tax_year": 2025,
+  "child_tax_credit": {
+    "maximum_credit_per_child": 2200,
+    "qualifying_child_age_limit": 17,
+    "refundable_portion_name": "Additional Child Tax Credit (ACTC)",
+    "refundable_maximum_per_child": 1700,
+    "refundable_earned_income_threshold": 2500,
+    "phase_out": {
+      "single_threshold": 200000,
+      "joint_threshold": 400000,
+      "phase_out_rate": 0.05
+    },
+    "form": "Schedule 8812 (Form 1040)",
+    "form_1040_line_nonrefundable": 19,
+    "form_1040_line_refundable": 28,
+    "notes": "CTC increased from $2,000 to $2,200 per child by One Big Beautiful Bill Act. Credit reduced by 5% of AGI exceeding threshold. ACTC requires minimum earned income of $2,500."
+  },
+  "credit_for_other_dependents": {
+    "maximum_credit_per_dependent": 500,
+    "refundable": false,
+    "phase_out": {
+      "single_threshold": 200000,
+      "joint_threshold": 400000,
+      "phase_out_rate": 0.05
+    },
+    "notes": "Non-refundable credit for dependents who do not qualify for CTC (e.g., children 17+, qualifying relatives). Same phase-out thresholds as CTC."
+  },
+  "earned_income_tax_credit": {
+    "maximum_amounts": {
+      "no_children": "UNKNOWN",
+      "one_child": "UNKNOWN",
+      "two_children": "UNKNOWN",
+      "three_or_more_children": 8046
+    },
+    "notes": "Only the maximum for 3+ qualifying children ($8,046) was explicitly stated in IRS sources reviewed. Other amounts require IRS Publication 596 or EITC tables."
+  },
+  "notes": "Non-refundable credits reduce tax liability to zero but no further. Refundable credits (ACTC, EITC) can result in a refund. Personal exemption remains $0 for 2025 (suspended through 2025 by TCJA, now permanently eliminated by OBBBA)."
+}
