@@ -1,0 +1,44 @@
+{
+  "source": "IRS Revenue Procedure 2024-40; IRS Newsroom Tax Inflation Adjustments for Tax Year 2025",
+  "tax_year": 2025,
+  "alternative_minimum_tax": {
+    "exemption_amounts": {
+      "single": 88100,
+      "married_filing_jointly": 137000,
+      "married_filing_separately": 68500
+    },
+    "phase_out_thresholds": {
+      "single": 626350,
+      "married_filing_jointly": 1252700,
+      "married_filing_separately": 626350
+    },
+    "notes": "AMT exemption phases out at 25 cents per dollar above threshold."
+  },
+  "foreign_earned_income_exclusion": 130000,
+  "estate_and_gift": {
+    "estate_basic_exclusion": 13990000,
+    "annual_gift_exclusion": 19000,
+    "notes": "Estate exclusion per decedent dying in 2025. Gift exclusion per donee per year."
+  },
+  "adoption_credit": {
+    "maximum_credit": 17280,
+    "notes": "Maximum adoption credit for qualified adoption expenses."
+  },
+  "qualified_transportation_fringe": {
+    "monthly_transit_limit": 325,
+    "monthly_parking_limit": 325
+  },
+  "health_fsa": {
+    "salary_reduction_limit": 3300,
+    "carryover_limit": 660
+  },
+  "personal_exemption": {
+    "amount": 0,
+    "notes": "Personal exemption suspended by TCJA for 2018-2025, permanently eliminated by One Big Beautiful Bill Act."
+  },
+  "itemized_deduction_limitation": {
+    "applies": false,
+    "notes": "Pease limitation suspended by TCJA for 2018-2025, permanently eliminated by One Big Beautiful Bill Act."
+  },
+  "notes": "Additional tax parameters from Rev. Proc. 2024-40. All amounts adjusted for inflation by approximately 2.8% from 2024."
+}

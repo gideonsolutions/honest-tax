@@ -1,0 +1,37 @@
+{
+  "source": "IRS Revenue Procedure 2024-40; One Big Beautiful Bill Act (signed July 4, 2025)",
+  "tax_year": 2025,
+  "base_amounts": {
+    "single": 15750,
+    "married_filing_jointly": 31500,
+    "married_filing_separately": 15750,
+    "head_of_household": 23625,
+    "qualifying_surviving_spouse": 31500
+  },
+  "additional_amounts": {
+    "age_65_or_older": {
+      "single_or_head_of_household": 2000,
+      "married_or_surviving_spouse": 1600
+    },
+    "blind": {
+      "single_or_head_of_household": 2000,
+      "married_or_surviving_spouse": 1600
+    }
+  },
+  "senior_bonus_deduction": {
+    "amount_per_person": 6000,
+    "effective_years": [2025, 2026, 2027, 2028],
+    "phase_out": {
+      "single_threshold": 75000,
+      "joint_threshold": 150000,
+      "phase_out_rate": 0.06
+    },
+    "notes": "New deduction under One Big Beautiful Bill Act. $6,000 per eligible individual age 65+. Phases out at 6% per dollar over threshold. This is IN ADDITION to the existing additional standard deduction for age 65+."
+  },
+  "dependent_limitation": {
+    "minimum": 1350,
+    "earned_income_plus": 450,
+    "notes": "Dependent's standard deduction is the greater of $1,350 or earned income plus $450, but cannot exceed the basic standard deduction for their filing status."
+  },
+  "notes": "Base amounts increased from Rev. Proc. 2024-40 values ($15,000/$30,000/$22,500) by the One Big Beautiful Bill Act to $15,750/$31,500/$23,625. Additional amounts for age 65+ and blindness are cumulative (both 65+ AND blind = $4,000 for single, $3,200 for married)."
+}

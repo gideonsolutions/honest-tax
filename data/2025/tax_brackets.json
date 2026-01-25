@@ -1,0 +1,44 @@
+{
+  "source": "IRS Revenue Procedure 2024-40; IRS Newsroom Tax Inflation Adjustments for Tax Year 2025",
+  "tax_year": 2025,
+  "rates": [0.10, 0.12, 0.22, 0.24, 0.32, 0.35, 0.37],
+  "brackets": {
+    "single": {
+      "10": { "min": 0, "max": 11925 },
+      "12": { "min": 11925, "max": 48475 },
+      "22": { "min": 48475, "max": 103350 },
+      "24": { "min": 103350, "max": 197300 },
+      "32": { "min": 197300, "max": 250525 },
+      "35": { "min": 250525, "max": 626350 },
+      "37": { "min": 626350, "max": null }
+    },
+    "married_filing_jointly": {
+      "10": { "min": 0, "max": 23850 },
+      "12": { "min": 23850, "max": 96950 },
+      "22": { "min": 96950, "max": 206700 },
+      "24": { "min": 206700, "max": 394600 },
+      "32": { "min": 394600, "max": 501050 },
+      "35": { "min": 501050, "max": 751600 },
+      "37": { "min": 751600, "max": null }
+    },
+    "married_filing_separately": {
+      "10": { "min": 0, "max": 11925 },
+      "12": { "min": 11925, "max": 48475 },
+      "22": { "min": 48475, "max": 103350 },
+      "24": { "min": 103350, "max": 197300 },
+      "32": { "min": 197300, "max": 250525 },
+      "35": { "min": 250525, "max": 375800 },
+      "37": { "min": 375800, "max": null }
+    },
+    "head_of_household": {
+      "10": { "min": 0, "max": 17000 },
+      "12": { "min": 17000, "max": 64850 },
+      "22": { "min": 64850, "max": 103350 },
+      "24": { "min": 103350, "max": 197300 },
+      "32": { "min": 197300, "max": 250500 },
+      "35": { "min": 250500, "max": 626350 },
+      "37": { "min": 626350, "max": null }
+    }
+  },
+  "notes": "Tax brackets from Rev. Proc. 2024-40. The seven rates (10%, 12%, 22%, 24%, 32%, 35%, 37%) remain unchanged from prior years. Thresholds adjusted for inflation by approximately 2.8%. Married Filing Separately 35%/37% threshold is half of MFJ per IRS rules."
+}
