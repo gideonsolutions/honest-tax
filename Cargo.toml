@@ -7,3 +7,8 @@ version = "0.1.0"
 edition = "2024"
 license = "Apache-2.0"
 repository = "https://github.com/gideonsolutions/gideon-tax"
+
+[workspace.dependencies]
+rust_decimal = { version = "1.36", features = ["serde"] }
+rust_decimal_macros = "1.36"
+serde = { version = "1.0", features = ["derive"] }
