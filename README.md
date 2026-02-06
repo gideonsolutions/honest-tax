@@ -1,4 +1,4 @@
-# HonestTax
+# GideonTax
 
 Deterministic US federal income tax calculator.
 
