@@ -1,0 +1,185 @@
+[form]
+name = "1040"
+year = 2025
+title = "U.S. Individual Income Tax Return"
+
+[header]
+fiscal_year_beginning = "date"
+fiscal_year_ending = "date"
+section_301_9100_2 = "bool"
+combat_zone = "bool"
+taxpayer_deceased = "bool"
+taxpayer_deceased_date = "date"
+spouse_deceased = "bool"
+spouse_deceased_date = "date"
+other = "string"
+
+[filing_status]
+single = "bool"
+married_filing_jointly = "bool"
+married_filing_separately = "bool"
+married_filing_separately_spouse_name = "string"
+head_of_household = "bool"
+head_of_household_qualifying_person_name = "string"
+qualifying_surviving_spouse = "bool"
+qualifying_surviving_spouse_child_name = "string"
+
+[taxpayer]
+first_name = "string"
+last_name = "string"
+ssn = "ssn"
+spouse_first_name = "string"
+spouse_last_name = "string"
+spouse_ssn = "ssn"
+
+[address]
+street = "string"
+apt_no = "string"
+city = "string"
+state = "string"
+zip = "string"
+is_main_home_is_joint_return_and_in_america_for_more_than_half_year = "bool"
+foreign_country = "string"
+foreign_province = "string"
+foreign_postal_code = "string"
+
+[presidential_election_fund]
+you = "bool"
+spouse = "bool"
+
+[digital_assets]
+yes = "bool"
+no = "bool"
+
+[age_and_blindness]
+you_born_before_jan_2_1961 = "bool"
+you_blind = "bool"
+spouse_born_before_jan_2_1961 = "bool"
+spouse_blind = "bool"
+
+[dependents]
+first_name = "string"
+last_name = "string"
+ssn = "ssn"
+relationship = "string"
+child_tax_credit = "bool"
+credit_for_other_dependents = "bool"
+
+[income]
+line_1a = "usd"
+line_1b = "usd"
+line_1c = "usd"
+line_1d = "usd"
+line_1e = "usd"
+line_1f = "usd"
+line_1g = "usd"
+line_1h = "usd"
+line_1i = "usd"
+line_1z = "usd"
+line_2a = "usd"
+line_2b = "usd"
+line_3a = "usd"
+line_3b = "usd"
+line_3c = "usd"
+line_3c_8814 = "bool"
+line_4a = "usd"
+line_4b = "usd"
+line_4c = "usd"
+line_4c_rollover = "bool"
+line_5a = "usd"
+line_5b = "usd"
+line_5c = "usd"
+line_5c_rollover = "bool"
+line_6a = "usd"
+line_6b = "usd"
+line_6c = "usd"
+line_6c_lump_sum = "bool"
+line_6d = "usd"
+line_7a = "usd"
+line_7a_schedule_d_not_required = "bool"
+line_7b = "usd"
+line_8 = "usd"
+line_9 = "usd"
+line_10 = "usd"
+line_11a = "usd"
+line_11b = "usd"
+
+[deductions]
+line_12a_you_itemize = "bool"
+line_12b_spouse_itemizes_separately = "bool"
+line_12c = "usd"
+line_12d_you_dual_status_alien = "bool"
+line_12e_you_1310_claimant = "bool"
+line_13a = "usd"
+line_13b = "usd"
+line_14 = "usd"
+line_15 = "usd"
+
+[tax_and_credits]
+line_16 = "usd"
+line_16_form_8814 = "bool"
+line_16_form_4972 = "bool"
+line_16_other = "bool"
+line_17 = "usd"
+line_18 = "usd"
+line_19 = "usd"
+line_20 = "usd"
+line_21 = "usd"
+line_22 = "usd"
+line_23 = "usd"
+line_24 = "usd"
+
+[payments]
+line_25a = "usd"
+line_25b = "usd"
+line_25c = "usd"
+line_25d = "usd"
+line_26 = "usd"
+line_27a = "usd"
+line_27a_nontaxable_combat_pay = "bool"
+line_27a_prior_year_earned_income = "bool"
+line_27b = "usd"
+line_27c = "usd"
+line_28 = "usd"
+line_29 = "usd"
+line_30 = "usd"
+line_31 = "usd"
+line_32 = "usd"
+line_33 = "usd"
+
+[refund]
+line_34 = "usd"
+line_35a = "usd"
+line_35b = "string"
+line_35c_checking = "bool"
+line_35c_savings = "bool"
+line_35d = "string"
+line_36 = "usd"
+
+[amount_owed]
+line_37 = "usd"
+line_38 = "usd"
+
+[third_party_designee]
+yes = "bool"
+no = "bool"
+name = "string"
+phone = "string"
+pin = "string"
+
+[signature]
+your_occupation = "string"
+your_identity_protection_pin = "string"
+spouse_occupation = "string"
+spouse_identity_protection_pin = "string"
+phone = "string"
+email = "string"
+
+[paid_preparer]
+name = "string"
+ptin = "string"
+self_employed = "bool"
+firm_name = "string"
+firm_address = "string"
+firm_ein = "string"
+firm_phone = "string"
