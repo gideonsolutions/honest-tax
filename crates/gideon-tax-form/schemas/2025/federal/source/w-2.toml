@@ -154,6 +154,8 @@ box = "14b"
 name = "treasury_tipped_occupation_codes"
 label = "Treasury Tipped Occupation Code(s)"
 type = "string"
+# Expected format: comma-separated list of Treasury tipped occupation codes,
+# e.g. "12,34,56". Whitespace around commas may be included and should be ignored.
 required = false
 
 # ── State and local (boxes 15–20, two rows) ──────────────────────────
