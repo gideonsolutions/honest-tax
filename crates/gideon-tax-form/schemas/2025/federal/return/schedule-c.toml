@@ -1,0 +1,472 @@
+[form]
+number = "Schedule C"
+title = "Profit or Loss From Business (Sole Proprietorship)"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sc"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "A"
+name = "principal_business"
+label = "Principal business or profession, including product or service"
+type = "string"
+
+[[fields]]
+line = "B"
+name = "business_code"
+label = "Enter code from instructions"
+type = "string"
+
+[[fields]]
+line = "C"
+name = "business_name"
+label = "Business name. If no separate business name, leave blank"
+type = "string"
+required = false
+
+[[fields]]
+line = "D"
+name = "ein"
+label = "Employer ID number (EIN), if any"
+type = "ein"
+required = false
+
+[[fields]]
+line = "E"
+name = "business_address"
+label = "Business address (including suite or room no.)"
+type = "string"
+required = false
+
+[[fields]]
+line = "F"
+name = "accounting_method"
+label = "Accounting method"
+type = "string"
+# Values: Cash, Accrual, Other
+
+[[fields]]
+line = "G"
+name = "materially_participated"
+label = "Did you materially participate in the operation of this business during 2025?"
+type = "bool"
+
+[[fields]]
+line = "H"
+name = "started_business"
+label = "If you started or acquired this business during 2025, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "I"
+name = "payments_requiring_1099"
+label = "Did you make any payments in 2025 that would require you to file Form(s) 1099?"
+type = "bool"
+
+[[fields]]
+line = "J"
+name = "filed_1099s"
+label = "If 'Yes,' did you or will you file required Form(s) 1099?"
+type = "bool"
+required = false
+
+# ── Part I — Income ────────────────────────────────────────────────
+
+[[fields]]
+line = "1"
+name = "gross_receipts"
+label = "Gross receipts or sales"
+type = "usd"
+
+[[fields]]
+line = "2"
+name = "returns_allowances"
+label = "Returns and allowances"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "net_receipts"
+label = "Subtract line 2 from line 1"
+type = "usd"
+
+[[fields]]
+line = "4"
+name = "cogs"
+label = "Cost of goods sold (from line 42)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5"
+name = "gross_profit"
+label = "Gross profit. Subtract line 4 from line 3"
+type = "usd"
+
+[[fields]]
+line = "6"
+name = "other_income"
+label = "Other income, including federal and state gasoline or fuel tax credit or refund"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "gross_income"
+label = "Gross income. Add lines 5 and 6"
+type = "usd"
+
+# ── Part II — Expenses ─────────────────────────────────────────────
+
+[[fields]]
+line = "8"
+name = "advertising"
+label = "Advertising"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "car_truck_expenses"
+label = "Car and truck expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "commissions_fees"
+label = "Commissions and fees"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "contract_labor"
+label = "Contract labor"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "depletion"
+label = "Depletion"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "depreciation"
+label = "Depreciation and section 179 expense deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "employee_benefit_programs"
+label = "Employee benefit programs (other than on line 19)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "insurance"
+label = "Insurance (other than health)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16a"
+name = "mortgage_interest"
+label = "Interest on business indebtedness (mortgage)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16b"
+name = "other_interest"
+label = "Interest on business indebtedness (other)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "legal_professional"
+label = "Legal and professional services"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "office_expense"
+label = "Office expense"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "pension_profit_sharing"
+label = "Pension and profit-sharing plans"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20a"
+name = "rent_vehicles"
+label = "Rent or lease: Vehicles, machinery, and equipment"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20b"
+name = "rent_other"
+label = "Rent or lease: Other business property"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21"
+name = "repairs_maintenance"
+label = "Repairs and maintenance"
+type = "usd"
+required = false
+
+[[fields]]
+line = "22"
+name = "supplies"
+label = "Supplies (not included in Part III)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23"
+name = "taxes_licenses"
+label = "Taxes and licenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24a"
+name = "travel"
+label = "Travel"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24b"
+name = "deductible_meals"
+label = "Deductible meals"
+type = "usd"
+required = false
+
+[[fields]]
+line = "25"
+name = "utilities"
+label = "Utilities"
+type = "usd"
+required = false
+
+[[fields]]
+line = "26"
+name = "wages"
+label = "Wages (less employment credits)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "27a"
+name = "energy_efficient_buildings"
+label = "Energy efficient commercial buildings deduction. Attach Form 7205"
+type = "usd"
+required = false
+
+[[fields]]
+line = "27b"
+name = "other_expenses_from_48"
+label = "Other expenses (from line 48)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "28"
+name = "total_expenses"
+label = "Total expenses before expenses for business use of home. Add lines 8 through 27b"
+type = "usd"
+
+[[fields]]
+line = "29"
+name = "tentative_profit"
+label = "Tentative profit or (loss). Subtract line 28 from line 7"
+type = "usd"
+
+[[fields]]
+line = "30"
+name = "home_business_expense"
+label = "Expenses for business use of your home. Do not report these expenses elsewhere. Attach Form 8829"
+type = "usd"
+required = false
+
+[[fields]]
+line = "31"
+name = "net_profit_loss"
+label = "Net profit or (loss). Subtract line 30 from line 29"
+type = "usd"
+
+[[fields]]
+line = "32a"
+name = "all_investment_at_risk"
+label = "If you have a loss, check the box that describes your investment in this activity: All investment is at risk"
+type = "bool"
+required = false
+
+[[fields]]
+line = "32b"
+name = "some_investment_not_at_risk"
+label = "Some investment is not at risk"
+type = "bool"
+required = false
+
+# ── Part III — Cost of Goods Sold ──────────────────────────────────
+
+[[fields]]
+line = "33"
+name = "inventory_method"
+label = "Method used to value closing inventory"
+type = "string"
+# Values: Cost, Lower of cost or market, Other
+required = false
+
+[[fields]]
+line = "34"
+name = "inventory_change"
+label = "Was there any change in determining quantities, costs, or valuations between opening and closing inventory?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "35"
+name = "beginning_inventory"
+label = "Inventory at beginning of year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36"
+name = "purchases"
+label = "Purchases less cost of items withdrawn for personal use"
+type = "usd"
+required = false
+
+[[fields]]
+line = "37"
+name = "cost_of_labor"
+label = "Cost of labor. Do not include any amounts paid to yourself"
+type = "usd"
+required = false
+
+[[fields]]
+line = "38"
+name = "materials_supplies"
+label = "Materials and supplies"
+type = "usd"
+required = false
+
+[[fields]]
+line = "39"
+name = "other_costs"
+label = "Other costs"
+type = "usd"
+required = false
+
+[[fields]]
+line = "40"
+name = "total_cogs_before_inventory"
+label = "Add lines 35 through 39"
+type = "usd"
+
+[[fields]]
+line = "41"
+name = "ending_inventory"
+label = "Inventory at end of year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "42"
+name = "cost_of_goods_sold"
+label = "Cost of goods sold. Subtract line 41 from line 40. Enter here and on line 4"
+type = "usd"
+
+# ── Part IV — Information on Your Vehicle ──────────────────────────
+
+[[fields]]
+line = "43"
+name = "vehicle_service_date"
+label = "When did you place your vehicle in service for business purposes?"
+type = "date"
+required = false
+
+[[fields]]
+line = "44a"
+name = "business_miles"
+label = "Business miles"
+type = "integer"
+required = false
+
+[[fields]]
+line = "44b"
+name = "commuting_miles"
+label = "Commuting miles"
+type = "integer"
+required = false
+
+[[fields]]
+line = "44c"
+name = "other_miles"
+label = "Other miles"
+type = "integer"
+required = false
+
+[[fields]]
+line = "45"
+name = "vehicle_available_offduty"
+label = "Was your vehicle available for personal use during off-duty hours?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "46"
+name = "written_evidence"
+label = "Do you (or your spouse) have another vehicle available for personal use?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "47a"
+name = "vehicle_evidence"
+label = "Do you have evidence to support your deduction?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "47b"
+name = "evidence_written"
+label = "If 'Yes,' is the evidence written?"
+type = "bool"
+required = false
+
+# ── Part V — Other Expenses ────────────────────────────────────────
+
+[[fields]]
+line = "48"
+name = "other_expenses"
+label = "Other expenses. List type and amount"
+type = "list"
+required = false
+
+[fields.items]
+description = "string"
+amount = "usd"

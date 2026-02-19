@@ -1,0 +1,174 @@
+[form]
+number = "Schedule SE"
+title = "Self-Employment Tax"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sse"
+
+# ── Part I — Self-Employment Tax ─────────────────────────────────
+
+[[fields]]
+line = "1a"
+name = "net_farm_profit"
+label = "Net farm profit or (loss) from Schedule F, line 34, and farm partnerships, Schedule K-1 (Form 1065), box 14, code A"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1b"
+name = "social_security_received"
+label = "If you received social security retirement or disability benefits, enter the amount of Conservation Reserve Program payments included on Schedule F, line 4b, or listed on Schedule K-1 (Form 1065), box 20, code AH"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2"
+name = "net_nonfarm_profit"
+label = "Net profit or (loss) from Schedule C, line 31; and Schedule K-1 (Form 1065), box 14, code A (other than farming). See instructions for other income to report on this line"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "combined_se_income"
+label = "Combine lines 1a, 1b, and 2"
+type = "usd"
+
+[[fields]]
+line = "4a"
+name = "multiply_by_9235"
+label = "If line 3 is more than zero, multiply line 3 by 92.35% (0.9235). Otherwise, enter amount from line 3"
+type = "usd"
+
+[[fields]]
+line = "4b"
+name = "optional_method_total"
+label = "If you elect one or both of the optional methods, enter the total of lines 15 and 17 here"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4c"
+name = "combined_4a_4b"
+label = "Combine lines 4a and 4b. If less than $400, stop; you don't owe self-employment tax. Exception: If less than $400 and you had church employee income, enter -0- and continue"
+type = "usd"
+
+[[fields]]
+line = "5a"
+name = "church_employee_income"
+label = "Enter your church employee income from Form W-2. See instructions for definition of church employee income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5b"
+name = "church_income_multiply"
+label = "Multiply line 5a by 92.35% (0.9235). If less than $100, enter -0-"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "total_se_earnings"
+label = "Add lines 4c and 5b"
+type = "usd"
+
+[[fields]]
+line = "7"
+name = "ss_wage_base"
+label = "Maximum amount of combined wages and self-employment earnings subject to social security tax for 2025"
+type = "usd"
+
+[[fields]]
+line = "8a"
+name = "ss_wages_tips"
+label = "Total social security wages and tips (from Form(s) W-2, boxes 3 and 7)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8b"
+name = "unreported_tips"
+label = "Unreported tips subject to social security tax from Form 4137, line 10"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8c"
+name = "wages_from_8919"
+label = "Wages subject to social security tax from Form 8919, line 10"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8d"
+name = "total_ss_wages"
+label = "Add lines 8a, 8b, and 8c"
+type = "usd"
+
+[[fields]]
+line = "9"
+name = "ss_tax_base"
+label = "Subtract line 8d from line 7. If zero or less, enter -0- here and on line 10 and go to line 11"
+type = "usd"
+
+[[fields]]
+line = "10"
+name = "ss_tax"
+label = "Multiply the smaller of line 6 or line 9 by 12.4% (0.124)"
+type = "usd"
+
+[[fields]]
+line = "11"
+name = "medicare_tax"
+label = "Multiply line 6 by 2.9% (0.029)"
+type = "usd"
+
+[[fields]]
+line = "12"
+name = "total_se_tax"
+label = "Self-employment tax. Add lines 10 and 11. Enter here and on Schedule 2 (Form 1040), line 4"
+type = "usd"
+
+[[fields]]
+line = "13"
+name = "deductible_se_tax"
+label = "Deduction for one-half of self-employment tax. Multiply line 12 by 50% (0.50). Enter here and on Schedule 1 (Form 1040), line 15"
+type = "usd"
+
+# ── Part II — Optional Methods To Figure Net Earnings ────────────
+
+[[fields]]
+line = "14"
+name = "max_optional_income"
+label = "Maximum income for optional methods"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "farm_optional_method"
+label = "Enter the smaller of: two-thirds (2/3) of gross farm income (not less than zero) from Schedule F, line 9, and farm partnerships, Schedule K-1 (Form 1065), box 14, code B; or $7,240. Also include this amount on line 4b above"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16a"
+name = "nonfarm_optional_subtract"
+label = "Subtract line 15 from line 14"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16b"
+name = "nonfarm_optional_smaller"
+label = "Enter the smaller of: two-thirds (2/3) of gross nonfarm income (not less than zero) from Schedule C, line 7; and Schedule K-1 (Form 1065), box 14, code C; or the amount on line 16a"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "nonfarm_optional_method"
+label = "Enter the smaller of line 16b or $7,240. Also include this amount on line 4b above"
+type = "usd"
+required = false

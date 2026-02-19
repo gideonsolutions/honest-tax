@@ -1,0 +1,232 @@
+[form]
+number = "Schedule H"
+title = "Household Employment Taxes"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sh"
+
+# ── Threshold Questions ──────────────────────────────────────────
+
+[[fields]]
+line = "A"
+name = "had_household_employee"
+label = "Did you pay any one household employee cash wages of $2,800 or more in 2025?"
+type = "bool"
+
+[[fields]]
+line = "B"
+name = "withheld_federal_income_tax"
+label = "Did you withhold federal income tax during 2025 for any household employee?"
+type = "bool"
+
+[[fields]]
+line = "C"
+name = "paid_1000_any_quarter"
+label = "Did you pay total cash wages of $1,000 or more in any calendar quarter of 2024 or 2025 to all household employees?"
+type = "bool"
+
+# ── Part I — Social Security, Medicare, and Federal Income Taxes ──
+
+[[fields]]
+line = "1"
+name = "total_cash_wages_ss"
+label = "Total cash wages subject to social security tax"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2"
+name = "social_security_tax"
+label = "Social security tax. Multiply line 1 by 12.4% (0.124)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "total_cash_wages_medicare"
+label = "Total cash wages subject to Medicare tax"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "medicare_tax"
+label = "Medicare tax. Multiply line 3 by 2.9% (0.029)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5"
+name = "wages_additional_medicare"
+label = "Total cash wages subject to Additional Medicare Tax withholding"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "additional_medicare_tax"
+label = "Additional Medicare Tax withholding. Multiply line 5 by 0.9% (0.009)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld, if any"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8"
+name = "total_ss_medicare_fit"
+label = "Total social security, Medicare, and federal income taxes. Add lines 2, 4, 6, and 7"
+type = "usd"
+
+[[fields]]
+line = "9"
+name = "futa_quarterly_threshold"
+label = "Did you pay total cash wages of $1,000 or more in any calendar quarter of 2024 or 2025 to all household employees?"
+type = "bool"
+required = false
+
+# ── Part II — Federal Unemployment (FUTA) Tax ────────────────────
+# Screening questions
+
+[[fields]]
+line = "10"
+name = "paid_one_state_only"
+label = "Did you pay unemployment contributions to only one state?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "11"
+name = "paid_contributions_by_deadline"
+label = "Did you pay all state unemployment contributions for 2025 by April 15, 2026?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "12"
+name = "all_wages_taxable_for_state"
+label = "Were all wages that are taxable for FUTA tax also taxable for your state's unemployment tax?"
+type = "bool"
+required = false
+
+# Section A (if Yes to all of lines 10, 11, 12)
+
+[[fields]]
+line = "13"
+name = "state_name"
+label = "Name of the state where you paid unemployment contributions"
+type = "string"
+required = false
+
+[[fields]]
+line = "14"
+name = "contributions_paid"
+label = "Contributions paid to your state unemployment fund"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "section_a_futa_wages"
+label = "Total cash wages subject to FUTA tax"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "section_a_futa_tax"
+label = "FUTA tax. Multiply line 15 by 0.6% (0.006). Enter the result here, go to Part III, and enter this amount on line 26"
+type = "usd"
+required = false
+
+# Section B (if No to any of lines 10, 11, 12)
+
+[[fields]]
+line = "17"
+name = "state_unemployment_details"
+label = "State unemployment tax details. Complete all columns for each state"
+type = "list"
+required = false
+
+[fields.items]
+state_name = "string"
+taxable_wages = "usd"
+experience_rate_period = "string"
+experience_rate = "string"
+multiply_054 = "usd"
+multiply_rate = "usd"
+subtract = "usd"
+contributions_paid = "usd"
+
+[[fields]]
+line = "18"
+name = "section_b_totals"
+label = "Totals of columns (g) and (h) from line 17"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "add_columns_g_h"
+label = "Add columns (g) and (h) of line 18"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "section_b_futa_wages"
+label = "Total cash wages subject to FUTA tax"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21"
+name = "gross_futa_tax"
+label = "Multiply line 20 by 6.0% (0.060)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "22"
+name = "max_futa_credit"
+label = "Multiply line 20 by 5.4% (0.054)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23"
+name = "actual_futa_credit"
+label = "Enter the smaller of line 19 or line 22"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24"
+name = "section_b_futa_tax"
+label = "FUTA tax. Subtract line 23 from line 21. Enter the result here, go to Part III, and enter this amount on line 26"
+type = "usd"
+required = false
+
+# ── Part III — Total Household Employment Taxes ──────────────────
+
+[[fields]]
+line = "25"
+name = "amount_from_line_8"
+label = "Enter the amount from line 8"
+type = "usd"
+
+[[fields]]
+line = "26"
+name = "total_household_taxes"
+label = "Add line 16 (or line 24) and line 25"
+type = "usd"
+
+[[fields]]
+line = "27"
+name = "required_file_1040"
+label = "Are you required to file Form 1040?"
+type = "bool"

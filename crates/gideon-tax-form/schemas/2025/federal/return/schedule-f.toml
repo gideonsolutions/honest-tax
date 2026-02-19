@@ -1,0 +1,489 @@
+[form]
+number = "Schedule F"
+title = "Profit or Loss From Farming"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sf"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "A"
+name = "principal_crop"
+label = "Principal crop or activity"
+type = "string"
+
+[[fields]]
+line = "B"
+name = "activity_code"
+label = "Enter code from Part IV"
+type = "string"
+
+[[fields]]
+line = "C"
+name = "accounting_method"
+label = "Accounting method"
+type = "string"
+# Values: Cash, Accrual
+
+[[fields]]
+line = "D"
+name = "ein"
+label = "Employer ID number (EIN), if any"
+type = "ein"
+required = false
+
+[[fields]]
+line = "E"
+name = "materially_participated"
+label = "Did you materially participate in the operation of this business during 2025?"
+type = "bool"
+
+[[fields]]
+line = "F"
+name = "filed_1099"
+label = "Did you make any payments in 2025 that would require you to file Form(s) 1099?"
+type = "bool"
+
+[[fields]]
+line = "G"
+name = "filed_required_1099s"
+label = "If 'Yes,' did you or will you file required Form(s) 1099?"
+type = "bool"
+required = false
+
+# ── Part I — Farm Income—Cash Method ───────────────────────────────
+
+[[fields]]
+line = "1a"
+name = "livestock_sales"
+label = "Sales of livestock and other resale items"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1b"
+name = "livestock_cost_basis"
+label = "Cost or other basis of livestock or other items reported on line 1a"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1c"
+name = "livestock_net"
+label = "Subtract line 1b from line 1a"
+type = "usd"
+
+[[fields]]
+line = "2"
+name = "farm_rental_income"
+label = "Sales of livestock, produce, grains, and other products you raised"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3a"
+name = "cooperative_distributions_total"
+label = "Cooperative distributions (Form(s) 1099-PATR)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3b"
+name = "cooperative_distributions_taxable"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4a"
+name = "ag_program_payments_total"
+label = "Agricultural program payments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4b"
+name = "ag_program_payments_taxable"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5a"
+name = "ccc_loans_reported"
+label = "Commodity Credit Corporation (CCC) loans reported under election"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5b"
+name = "ccc_loans_forfeited"
+label = "CCC loans forfeited"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5c"
+name = "ccc_taxable_amount"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6a"
+name = "crop_insurance_total"
+label = "Crop insurance proceeds and federal crop disaster payments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6b"
+name = "crop_insurance_taxable"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6c"
+name = "crop_insurance_deferred"
+label = "If election to defer to next year is attached, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "6d"
+name = "crop_insurance_deferred_prior"
+label = "Amount deferred from prior year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "custom_hire_income"
+label = "Custom hire (machine work) income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8"
+name = "other_farm_income"
+label = "Other income, including federal and state gasoline or fuel tax credit or refund"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "gross_farm_income"
+label = "Gross income. Add amounts in the right column for lines 1c through 8. Enter here and on Part II, line 11"
+type = "usd"
+
+# ── Part II — Farm Expenses—Cash and Accrual Method ────────────────
+
+[[fields]]
+line = "10"
+name = "car_truck_expenses"
+label = "Car and truck expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "chemicals"
+label = "Chemicals"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "conservation_expenses"
+label = "Conservation expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "custom_hire"
+label = "Custom hire (machine work)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "depreciation_179"
+label = "Depreciation and section 179 expense deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "employee_benefit_programs"
+label = "Employee benefit programs other than on line 23"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "feed_purchased"
+label = "Feed"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "fertilizers_lime"
+label = "Fertilizers and lime"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "freight_trucking"
+label = "Freight and trucking"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "gasoline_fuel_oil"
+label = "Gasoline, fuel, and oil"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "insurance"
+label = "Insurance (other than health)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21a"
+name = "mortgage_interest"
+label = "Interest: Mortgage (paid to banks, etc.)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21b"
+name = "other_interest"
+label = "Interest: Other"
+type = "usd"
+required = false
+
+[[fields]]
+line = "22"
+name = "labor_hired"
+label = "Labor hired (less employment credits)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23"
+name = "pension_profit_sharing"
+label = "Pension and profit-sharing plans"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24a"
+name = "rent_vehicles"
+label = "Rent or lease: Vehicles, machinery, equipment"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24b"
+name = "rent_land"
+label = "Rent or lease: Other (land, animals, etc.)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "25"
+name = "repairs_maintenance"
+label = "Repairs and maintenance"
+type = "usd"
+required = false
+
+[[fields]]
+line = "26"
+name = "seeds_plants"
+label = "Seeds and plants"
+type = "usd"
+required = false
+
+[[fields]]
+line = "27"
+name = "storage_warehousing"
+label = "Storage and warehousing"
+type = "usd"
+required = false
+
+[[fields]]
+line = "28"
+name = "supplies"
+label = "Supplies"
+type = "usd"
+required = false
+
+[[fields]]
+line = "29"
+name = "taxes"
+label = "Taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "30"
+name = "utilities"
+label = "Utilities"
+type = "usd"
+required = false
+
+[[fields]]
+line = "31"
+name = "veterinary_breeding_medicine"
+label = "Veterinary, breeding, and medicine"
+type = "usd"
+required = false
+
+[[fields]]
+line = "32a"
+name = "other_expenses_list"
+label = "Other expenses (specify)"
+type = "list"
+required = false
+
+[fields.items]
+description = "string"
+amount = "usd"
+
+[[fields]]
+line = "32b"
+name = "total_other_expenses"
+label = "Total other expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "33"
+name = "total_expenses"
+label = "Total expenses. Add lines 10 through 32b"
+type = "usd"
+
+[[fields]]
+line = "34"
+name = "net_farm_profit_loss"
+label = "Net farm profit or (loss). Subtract line 33 from line 9"
+type = "usd"
+
+# ── Part III — Farm Income—Accrual Method ──────────────────────────
+
+[[fields]]
+line = "35"
+name = "accrual_sales_livestock_raised"
+label = "Sales of livestock, produce, grains, and other products during the year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36a"
+name = "accrual_cooperative_total"
+label = "Cooperative distributions (Form(s) 1099-PATR)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36b"
+name = "accrual_cooperative_taxable"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "37a"
+name = "accrual_ag_payments_total"
+label = "Agricultural program payments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "37b"
+name = "accrual_ag_payments_taxable"
+label = "Taxable amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "38"
+name = "accrual_ccc_loans"
+label = "Commodity Credit Corporation (CCC) loans reported under election and forfeited"
+type = "usd"
+required = false
+
+[[fields]]
+line = "39"
+name = "accrual_crop_insurance"
+label = "Crop insurance proceeds"
+type = "usd"
+required = false
+
+[[fields]]
+line = "40"
+name = "accrual_custom_hire"
+label = "Custom hire (machine work) income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "41"
+name = "accrual_other_income"
+label = "Other income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "42"
+name = "accrual_gross_income_sum"
+label = "Add amounts in the right column for lines 35 through 41"
+type = "usd"
+
+[[fields]]
+line = "43"
+name = "beginning_inventory"
+label = "Inventory of livestock, produce, grains, and other products at beginning of the year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "44"
+name = "cost_livestock_purchased"
+label = "Cost of livestock, produce, grains, and other products purchased during the year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "45"
+name = "accrual_add_43_44"
+label = "Add lines 43 and 44"
+type = "usd"
+
+[[fields]]
+line = "46"
+name = "ending_inventory"
+label = "Inventory of livestock, produce, grains, and other products at end of year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "47"
+name = "cost_of_items"
+label = "Cost of livestock, produce, grains, and other products sold. Subtract line 46 from line 45"
+type = "usd"
+
+[[fields]]
+line = "48"
+name = "accrual_gross_income"
+label = "Gross income. Subtract line 47 from line 42. Enter here and on Part II, line 11"
+type = "usd"

@@ -1,0 +1,177 @@
+[form]
+number = "Schedule D"
+title = "Capital Gains and Losses"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sd"
+
+# ── Part I — Short-Term Capital Gains and Losses ───────────────────
+
+[[fields]]
+line = "1a"
+name = "st_totals_1099b_basis_reported"
+label = "Totals for all short-term transactions reported on Form 1099-B for which basis was reported to the IRS and for which you have no adjustments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1b"
+name = "st_form_8949_box_a"
+label = "Totals for all transactions reported on Form(s) 8949 with Box A checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2"
+name = "st_form_8949_box_b"
+label = "Totals for all transactions reported on Form(s) 8949 with Box B checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "st_form_8949_box_c"
+label = "Totals for all transactions reported on Form(s) 8949 with Box C checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "st_gain_loss_other"
+label = "Short-term gain or (loss) from Forms 4684, 6252, 6781, and 8824"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5"
+name = "st_gain_loss_partnerships"
+label = "Net short-term gain or (loss) from partnerships, S corporations, estates, and trusts from Schedule(s) K-1"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "st_capital_loss_carryover"
+label = "Short-term capital loss carryover. Enter the amount, if any, from line 8 of your Capital Loss Carryover Worksheet"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "net_st_gain_loss"
+label = "Net short-term capital gain or (loss). Combine lines 1a through 6 in column (h)"
+type = "usd"
+
+# ── Part II — Long-Term Capital Gains and Losses ───────────────────
+
+[[fields]]
+line = "8a"
+name = "lt_totals_1099b_basis_reported"
+label = "Totals for all long-term transactions reported on Form 1099-B for which basis was reported to the IRS and for which you have no adjustments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8b"
+name = "lt_form_8949_box_d"
+label = "Totals for all transactions reported on Form(s) 8949 with Box D checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "lt_form_8949_box_e"
+label = "Totals for all transactions reported on Form(s) 8949 with Box E checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "lt_form_8949_box_f"
+label = "Totals for all transactions reported on Form(s) 8949 with Box F checked"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "lt_gain_loss_other"
+label = "Gain from Form 2439 or 6252; or long-term gain or (loss) from Forms 4684, 6781, and 8824"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "lt_gain_loss_partnerships"
+label = "Net long-term gain or (loss) from partnerships, S corporations, estates, and trusts from Schedule(s) K-1"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "capital_gain_distributions"
+label = "Capital gain distributions"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "lt_capital_loss_carryover"
+label = "Long-term capital loss carryover. Enter the amount, if any, from line 13 of your Capital Loss Carryover Worksheet"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "net_lt_gain_loss"
+label = "Net long-term capital gain or (loss). Combine lines 8a through 14 in column (h)"
+type = "usd"
+
+# ── Part III — Summary ─────────────────────────────────────────────
+
+[[fields]]
+line = "16"
+name = "combined_gain_loss"
+label = "Combine lines 7 and 15 and enter the result"
+type = "usd"
+
+[[fields]]
+line = "17"
+name = "gain_line_16"
+label = "Are lines 15 and 16 both gains? If 'Yes,' go to line 18. If 'No,' skip to line 21"
+type = "bool"
+required = false
+
+[[fields]]
+line = "18"
+name = "rate_28_gain"
+label = "28% rate gain or (loss). Enter amount from line 18 of the 28% Rate Gain Worksheet"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "unrecaptured_1250_gain"
+label = "Unrecaptured section 1250 gain. Enter amount from line 18 of the Unrecaptured Section 1250 Gain Worksheet"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "worksheet_needed"
+label = "Are lines 18 and 19 both zero or blank and you are not filing Form 4952?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "21"
+name = "loss_line_16"
+label = "If line 16 is a loss, enter here and on Form 1040, line 7, the smaller of the loss on line 16 or ($3,000), or if married filing separately, ($1,500)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "22"
+name = "qualified_dividends"
+label = "Do you have qualified dividends on Form 1040, line 3a?"
+type = "bool"
+required = false
