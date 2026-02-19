@@ -5,5 +5,5 @@ members = ["crates/gideon-tax-core", "crates/gideon-tax-form"]
 [workspace.package]
 version = "0.1.0"
 edition = "2024"
-license = "Apache-2.0"
+license = "LicenseRef-GCOSL-1.0"
 repository = "https://github.com/gideonsolutions/gideon-tax"

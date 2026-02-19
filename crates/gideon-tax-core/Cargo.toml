@@ -1,5 +1,5 @@
 [package]
-name = "honest-tax-core"
+name = "gideon-tax-core"
 description = "Deterministic US federal income tax calculator"
 version.workspace = true
 edition.workspace = true
