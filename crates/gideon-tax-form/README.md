@@ -29,6 +29,7 @@ individual's **tax return**.
 | `1098.toml` | 1098 | Mortgage Interest Statement |
 | `1098-e.toml` | 1098-E | Student Loan Interest Statement |
 | `1098-t.toml` | 1098-T | Tuition Statement |
+| `1098-c.toml` | 1098-C | Contributions of Motor Vehicles, Boats, and Airplanes |
 | `1099-int.toml` | 1099-INT | Interest Income |
 | `1099-div.toml` | 1099-DIV | Dividends and Distributions |
 | `1099-oid.toml` | 1099-OID | Original Issue Discount |

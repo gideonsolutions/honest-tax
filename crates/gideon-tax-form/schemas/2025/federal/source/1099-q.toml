@@ -1,0 +1,157 @@
+[form]
+number = "1099-Q"
+title = "Payments From Qualified Education Programs (Under Sections 529 and 530)"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099q"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S/TRUSTEE'S TIN"
+type = "tin"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S/TRUSTEE'S name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "payer_phone"
+name = "payer_phone"
+label = "PAYER'S/TRUSTEE'S telephone number"
+type = "string"
+required = false
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "tin"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "fatca"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "gross_distribution"
+label = "Gross distribution"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "earnings"
+label = "Earnings"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "basis"
+label = "Basis"
+type = "usd"
+required = false
+
+# ── Box 4 — Transfer type checkboxes ───────────────────────────────
+
+[[fields]]
+box = "4a"
+name = "trustee_to_trustee_transfer"
+label = "Trustee-to-trustee transfer"
+type = "bool"
+required = false
+
+[[fields]]
+box = "4b"
+name = "transfer_to_roth_ira"
+label = "Transfer to Roth IRA"
+type = "bool"
+required = false
+
+# ── Box 5 — Distribution source checkboxes ─────────────────────────
+
+[[fields]]
+box = "5a"
+name = "private_qtp"
+label = "Private"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5b"
+name = "state_qtp"
+label = "State"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5c"
+name = "coverdell_esa"
+label = "Coverdell ESA"
+type = "bool"
+required = false
+
+# ── Box 6 — Designated beneficiary ─────────────────────────────────
+
+[[fields]]
+box = "6"
+name = "not_designated_beneficiary"
+label = "If this box is checked, the recipient is not the designated beneficiary"
+type = "bool"
+required = false
+
+# ── Box 7 — Distribution code (optional for 2025) ──────────────────
+
+[[fields]]
+box = "7"
+name = "distribution_code"
+label = "Distribution code"
+type = "string"
+required = false
+
+# ── Distribution code values ────────────────────────────────────────
+#
+# These are the valid codes for the distribution_code field (box 7).
+# Reporting a code in box 7 is optional for 2025.
+
+[enums.distribution_code]
+1 = "Distributions (including transfers)"
+2 = "Excess contributions plus earnings taxable in the current year"
+3 = "Excess contributions plus earnings taxable in the prior year"
+4 = "Disability"
+5 = "Death"
+6 = "Prohibited transaction"

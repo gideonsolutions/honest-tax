@@ -1,0 +1,295 @@
+[form]
+number = "1099-B"
+title = "Proceeds From Broker and Barter Exchange Transactions"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099b"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "fatca_filing_requirement"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+[[fields]]
+box = "second_tin_not"
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number (see instructions)"
+type = "string"
+required = false
+
+[[fields]]
+box = "cusip_number"
+name = "cusip_number"
+label = "CUSIP number"
+type = "string"
+required = false
+
+[[fields]]
+box = "applicable_checkbox_on_form_8949"
+name = "applicable_checkbox_on_form_8949"
+label = "Applicable checkbox on Form 8949"
+type = "string"
+required = false
+# Valid values: A, B, D, E, X
+
+# ── Transaction detail (boxes 1a–1g) ───────────────────────────────
+
+[[fields]]
+box = "1a"
+name = "description_of_property"
+label = "Description of property (Example: 100 sh. XYZ Co.)"
+type = "string"
+
+[[fields]]
+box = "1b"
+name = "date_acquired"
+label = "Date acquired"
+type = "date"
+required = false
+
+[[fields]]
+box = "1c"
+name = "date_sold_or_disposed"
+label = "Date sold or disposed of"
+type = "date"
+required = false
+
+[[fields]]
+box = "1d"
+name = "proceeds"
+label = "Proceeds"
+type = "usd"
+
+[[fields]]
+box = "1e"
+name = "cost_or_other_basis"
+label = "Cost or other basis"
+type = "usd"
+required = false
+
+[[fields]]
+box = "1f"
+name = "accrued_market_discount"
+label = "Accrued market discount"
+type = "usd"
+required = false
+
+[[fields]]
+box = "1g"
+name = "wash_sale_loss_disallowed"
+label = "Wash sale loss disallowed"
+type = "usd"
+required = false
+
+# ── Gain/loss classification (box 2) ───────────────────────────────
+
+[[fields]]
+box = "2"
+name = "short_term_gain_or_loss"
+label = "Short-term gain or loss"
+type = "bool"
+required = false
+
+[[fields]]
+box = "2"
+name = "long_term_gain_or_loss"
+label = "Long-term gain or loss"
+type = "bool"
+required = false
+
+[[fields]]
+box = "2"
+name = "ordinary"
+label = "Ordinary"
+type = "bool"
+required = false
+
+# ── Checkboxes and withholding (boxes 3–7) ─────────────────────────
+
+[[fields]]
+box = "3"
+name = "collectibles"
+label = "If checked, proceeds from collectibles"
+type = "bool"
+required = false
+
+[[fields]]
+box = "3"
+name = "qof"
+label = "If checked, proceeds from a QOF"
+type = "bool"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "noncovered_security"
+label = "Check if noncovered security"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6"
+name = "reported_to_irs_gross_proceeds"
+label = "Reported to IRS: Gross proceeds"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6"
+name = "reported_to_irs_net_proceeds"
+label = "Reported to IRS: Net proceeds"
+type = "bool"
+required = false
+
+[[fields]]
+box = "7"
+name = "loss_not_allowed"
+label = "Check if loss is not allowed based on amount in 1d"
+type = "bool"
+required = false
+
+# ── Section 1256 contracts (boxes 8–11) ────────────────────────────
+
+[[fields]]
+box = "8"
+name = "profit_or_loss_on_closed_contracts"
+label = "Profit or (loss) realized in 2025 on closed contracts"
+type = "usd"
+required = false
+
+[[fields]]
+box = "9"
+name = "unrealized_profit_or_loss_open_prior"
+label = "Unrealized profit or (loss) on open contracts—12/31/2024"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "unrealized_profit_or_loss_open_current"
+label = "Unrealized profit or (loss) on open contracts—12/31/2025"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "aggregate_profit_or_loss"
+label = "Aggregate profit or (loss) on contracts"
+type = "usd"
+required = false
+
+# ── Basis and bartering (boxes 12–13) ──────────────────────────────
+
+[[fields]]
+box = "12"
+name = "basis_reported_to_irs"
+label = "Check if basis reported to IRS"
+type = "bool"
+required = false
+
+[[fields]]
+box = "13"
+name = "bartering"
+label = "Bartering"
+type = "usd"
+required = false
+
+# ── State information (first row) ──────────────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_id_number_1"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_1"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+# ── State information (second row) ─────────────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_id_number_2"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_2"
+label = "State tax withheld"
+type = "usd"
+required = false

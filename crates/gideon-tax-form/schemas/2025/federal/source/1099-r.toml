@@ -1,0 +1,301 @@
+[form]
+number = "1099-R"
+title = "Distributions From Pensions, Annuities, Retirement or Profit-Sharing Plans, IRAs, Insurance Contracts, etc."
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099r"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "tin"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "tin"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "gross_distribution"
+label = "Gross distribution"
+type = "usd"
+
+[[fields]]
+box = "2a"
+name = "taxable_amount"
+label = "Taxable amount"
+type = "usd"
+
+[[fields]]
+box = "2b"
+name = "taxable_amount_not_determined"
+label = "Taxable amount not determined"
+type = "bool"
+required = false
+
+[[fields]]
+box = "2b"
+name = "total_distribution"
+label = "Total distribution"
+type = "bool"
+required = false
+
+[[fields]]
+box = "3"
+name = "capital_gain"
+label = "Capital gain (included in box 2a)"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "employee_contributions_or_insurance_premiums"
+label = "Employee contributions/Designated Roth contributions or insurance premiums"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "net_unrealized_appreciation"
+label = "Net unrealized appreciation in employer's securities"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "distribution_codes"
+label = "Distribution code(s)"
+type = "string"
+
+[[fields]]
+box = "7"
+name = "ira_sep_simple"
+label = "IRA/SEP/SIMPLE"
+type = "bool"
+required = false
+
+[[fields]]
+box = "8"
+name = "other"
+label = "Other"
+type = "usd"
+required = false
+
+[[fields]]
+box = "8"
+name = "other_percentage"
+label = "Other (%)"
+type = "string"
+required = false
+
+[[fields]]
+box = "9a"
+name = "your_percentage_of_total_distribution"
+label = "Your percentage of total distribution"
+type = "string"
+required = false
+
+[[fields]]
+box = "9b"
+name = "total_employee_contributions"
+label = "Total employee contributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "amount_allocable_to_irr_within_5_years"
+label = "Amount allocable to IRR within 5 years"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "first_year_of_designated_roth_contributions"
+label = "1st year of desig. Roth contrib."
+type = "string"
+required = false
+
+[[fields]]
+box = "12"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+[[fields]]
+box = "13"
+name = "date_of_payment"
+label = "Date of payment"
+type = "date"
+required = false
+
+# ── State and local information (first row) ────────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_tax_withheld_1"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_payers_state_no_1"
+label = "State/Payer's state no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_distribution_1"
+label = "State distribution"
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "local_tax_withheld_1"
+label = "Local tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "18"
+name = "name_of_locality_1"
+label = "Name of locality"
+type = "string"
+required = false
+
+[[fields]]
+box = "19"
+name = "local_distribution_1"
+label = "Local distribution"
+type = "usd"
+required = false
+
+# ── State and local information (second row) ───────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_tax_withheld_2"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_payers_state_no_2"
+label = "State/Payer's state no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_distribution_2"
+label = "State distribution"
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "local_tax_withheld_2"
+label = "Local tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "18"
+name = "name_of_locality_2"
+label = "Name of locality"
+type = "string"
+required = false
+
+[[fields]]
+box = "19"
+name = "local_distribution_2"
+label = "Local distribution"
+type = "usd"
+required = false
+
+# ── Distribution code values ───────────────────────────────────────────
+#
+# These are the valid codes for the distribution_codes field in box 7.
+# Up to two codes may be entered.
+
+[enums.distribution_code]
+"1" = "Early distribution, no known exception"
+"2" = "Early distribution, exception applies"
+"3" = "Disability"
+"4" = "Death"
+"5" = "Prohibited transaction"
+"6" = "Section 1035 exchange"
+"7" = "Normal distribution"
+"8" = "Excess contributions plus earnings/excess deferrals taxable in 2025"
+"9" = "Cost of current life insurance protection"
+A   = "May be eligible for 10-year tax option"
+B   = "Designated Roth account distribution"
+C   = "Reportable death benefits under section 6050Y"
+D   = "Annuity payments from nonqualified annuities that may be subject to tax under section 1411"
+E   = "Distributions under Employee Plans Compliance Resolution System (EPCRS)"
+F   = "Charitable gift annuity"
+G   = "Direct rollover of a distribution to a qualified plan, 403(b), governmental 457(b), or IRA"
+H   = "Direct rollover of a designated Roth account distribution to a Roth IRA"
+J   = "Early distribution from a Roth IRA, no known exception"
+K   = "Distribution of IRA assets not having a readily available FMV"
+L   = "Loans treated as deemed distributions under section 72(p)"
+M   = "Qualified plan loan offset"
+N   = "Recharacterized IRA contribution made for 2025 and recharacterized in 2025"
+P   = "Excess contributions plus earnings/excess deferrals taxable in 2024"
+Q   = "Qualified distribution from a Roth IRA"
+R   = "Recharacterized IRA contribution made for 2024 and recharacterized in 2025"
+S   = "Early distribution from a SIMPLE IRA in the first 2 years, no known exception"
+T   = "Roth IRA distribution, exception applies"
+U   = "Dividend distribution from ESOP under section 404(k)"
+W   = "Charges or payments for purchasing qualified long-term care insurance contracts"
+Y   = "Qualified charitable distribution (QCD) under section 408(d)(8)"

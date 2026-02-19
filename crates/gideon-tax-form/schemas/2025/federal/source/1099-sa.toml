@@ -1,0 +1,128 @@
+[form]
+number = "1099-SA"
+title = "Distributions From an HSA, Archer MSA, or Medicare Advantage MSA"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099sa"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "tin"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "TRUSTEE'S/PAYER'S name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "payer_phone"
+name = "payer_phone"
+label = "TRUSTEE'S/PAYER'S telephone number"
+type = "string"
+required = false
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "tin"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "fatca"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "gross_distribution"
+label = "Gross distribution"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "earnings_on_excess_contributions"
+label = "Earnings on excess contributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "distribution_code"
+label = "Distribution code"
+type = "string"
+
+[[fields]]
+box = "4"
+name = "fmv_on_date_of_death"
+label = "FMV on date of death"
+type = "usd"
+required = false
+
+# ── Box 5 — Account type checkboxes ────────────────────────────────
+
+[[fields]]
+box = "5"
+name = "hsa"
+label = "HSA"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5"
+name = "archer_msa"
+label = "Archer MSA"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5"
+name = "ma_msa"
+label = "MA MSA"
+type = "bool"
+required = false
+
+# ── Distribution code values ────────────────────────────────────────
+#
+# These are the valid codes for the distribution_code field (box 3).
+
+[enums.distribution_code]
+1 = "Normal distribution"
+2 = "Excess contributions"
+3 = "Disability"
+4 = "Death distribution other than code 6"
+5 = "Prohibited transaction"
+6 = "Death distribution after year of death to nonspouse beneficiary"

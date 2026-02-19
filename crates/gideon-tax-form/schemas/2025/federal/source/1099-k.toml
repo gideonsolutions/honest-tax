@@ -1,0 +1,236 @@
+[form]
+number = "1099-K"
+title = "Payment Card and Third Party Network Transactions"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099k"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+name = "filer_name_address_phone"
+label = "Filer's name, address, and telephone number"
+type = "string"
+
+[[fields]]
+name = "filer_tin"
+label = "Filer's TIN"
+type = "ein"
+
+[[fields]]
+name = "filer_is_pse"
+label = "Check to indicate if FILER is a Payment Settlement Entity (PSE)"
+type = "bool"
+required = false
+
+[[fields]]
+name = "filer_is_epf_other"
+label = "Check to indicate if FILER is an Electronic Payment Facilitator (EPF)/Other third party"
+type = "bool"
+required = false
+
+[[fields]]
+name = "transactions_payment_card"
+label = "Check to indicate transactions reported are: Payment card"
+type = "bool"
+required = false
+
+[[fields]]
+name = "transactions_third_party_network"
+label = "Check to indicate transactions reported are: Third party network"
+type = "bool"
+required = false
+
+[[fields]]
+name = "pse_name_phone"
+label = "PSE's name and telephone number"
+type = "string"
+required = false
+
+[[fields]]
+name = "payee_tin"
+label = "PAYEE'S TIN"
+type = "string"
+
+[[fields]]
+name = "payee_name_address"
+label = "PAYEE'S name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1a"
+name = "gross_amount"
+label = "Gross amount of payment card/third party network transactions"
+type = "usd"
+
+[[fields]]
+box = "1b"
+name = "card_not_present_transactions"
+label = "Card not present transactions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2"
+name = "merchant_category_code"
+label = "Merchant category code"
+type = "string"
+required = false
+
+[[fields]]
+box = "3"
+name = "number_of_payment_transactions"
+label = "Number of payment transactions"
+type = "integer"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+# ── Monthly gross amounts (boxes 5a–5l) ────────────────────────────────
+
+[[fields]]
+box = "5a"
+name = "january"
+label = "January"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5b"
+name = "february"
+label = "February"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5c"
+name = "march"
+label = "March"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5d"
+name = "april"
+label = "April"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5e"
+name = "may"
+label = "May"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5f"
+name = "june"
+label = "June"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5g"
+name = "july"
+label = "July"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5h"
+name = "august"
+label = "August"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5i"
+name = "september"
+label = "September"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5j"
+name = "october"
+label = "October"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5k"
+name = "november"
+label = "November"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5l"
+name = "december"
+label = "December"
+type = "usd"
+required = false
+
+# ── State information (two rows) ───────────────────────────────────────
+
+[[fields]]
+box = "6"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "7"
+name = "state_id_1"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "8"
+name = "state_income_tax_withheld_1"
+label = "State income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "7"
+name = "state_id_2"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "8"
+name = "state_income_tax_withheld_2"
+label = "State income tax withheld"
+type = "usd"
+required = false

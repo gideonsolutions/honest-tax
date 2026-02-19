@@ -1,0 +1,106 @@
+[form]
+number = "1099-S"
+title = "Proceeds From Real Estate Transactions"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099s"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "filer_tin"
+name = "filer_tin"
+label = "FILER'S TIN"
+type = "tin"
+
+[[fields]]
+box = "filer_name_address"
+name = "filer_name_address"
+label = "FILER'S name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "filer_phone"
+name = "filer_phone"
+label = "FILER'S telephone number"
+type = "string"
+required = false
+
+[[fields]]
+box = "transferor_tin"
+name = "transferor_tin"
+label = "TRANSFEROR'S TIN"
+type = "tin"
+
+[[fields]]
+box = "transferor_name"
+name = "transferor_name"
+label = "TRANSFEROR'S name"
+type = "string"
+
+[[fields]]
+box = "transferor_address"
+name = "transferor_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "transferor_city_state_zip"
+name = "transferor_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "fatca"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "date_of_closing"
+label = "Date of closing"
+type = "date"
+
+[[fields]]
+box = "2"
+name = "gross_proceeds"
+label = "Gross proceeds"
+type = "usd"
+
+[[fields]]
+box = "3"
+name = "address_or_legal_description"
+label = "Address (including city, state, and ZIP code) or legal description"
+type = "string"
+
+[[fields]]
+box = "4"
+name = "property_or_services_received"
+label = "Check here if the transferor received or will receive property or services as part of the consideration"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5"
+name = "transferor_is_foreign_person"
+label = "Check here if the transferor is a foreign person (nonresident alien, foreign partnership, foreign estate, or foreign trust)"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6"
+name = "buyers_part_of_real_estate_tax"
+label = "Buyer's part of real estate tax"
+type = "usd"
+required = false

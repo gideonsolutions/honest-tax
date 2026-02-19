@@ -1,0 +1,207 @@
+[form]
+number = "1099-MISC"
+title = "Miscellaneous Information"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099mec"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "tin"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "tin"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "2nd_tin_not"
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "rents"
+label = "Rents"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2"
+name = "royalties"
+label = "Royalties"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "other_income"
+label = "Other income"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "fishing_boat_proceeds"
+label = "Fishing boat proceeds"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "medical_and_health_care_payments"
+label = "Medical and health care payments"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "payer_made_direct_sales_of_5000_or_more"
+label = "Payer made direct sales totaling $5,000 or more of consumer products to recipient for resale"
+type = "bool"
+required = false
+
+[[fields]]
+box = "8"
+name = "substitute_payments_in_lieu_of_dividends_or_interest"
+label = "Substitute payments in lieu of dividends or interest"
+type = "usd"
+required = false
+
+[[fields]]
+box = "9"
+name = "crop_insurance_proceeds"
+label = "Crop insurance proceeds"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "gross_proceeds_paid_to_an_attorney"
+label = "Gross proceeds paid to an attorney"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "fish_purchased_for_resale"
+label = "Fish purchased for resale"
+type = "usd"
+required = false
+
+[[fields]]
+box = "12"
+name = "section_409a_deferrals"
+label = "Section 409A deferrals"
+type = "usd"
+required = false
+
+[[fields]]
+box = "13"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+# Box 14 — Reserved for future use (previously "Excess golden parachute payments",
+# moved to 1099-NEC box 3 starting in 2025).
+
+[[fields]]
+box = "15"
+name = "nonqualified_deferred_compensation"
+label = "Nonqualified deferred compensation"
+type = "usd"
+required = false
+
+# ── State information (first row) ──────────────────────────────────────
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_1"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_payers_state_no_1"
+label = "State/Payer's state no."
+type = "string"
+required = false
+
+[[fields]]
+box = "18"
+name = "state_income_1"
+label = "State income"
+type = "usd"
+required = false
+
+# ── State information (second row) ─────────────────────────────────────
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_2"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_payers_state_no_2"
+label = "State/Payer's state no."
+type = "string"
+required = false
+
+[[fields]]
+box = "18"
+name = "state_income_2"
+label = "State income"
+type = "usd"
+required = false
