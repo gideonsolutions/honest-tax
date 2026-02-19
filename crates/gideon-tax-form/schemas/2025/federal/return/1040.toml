@@ -616,7 +616,7 @@ required = false
 [[fields]]
 name = "preparer_ptin"
 label = "PTIN"
-type = "string"
+type = "ptin"
 required = false
 
 [[fields]]
