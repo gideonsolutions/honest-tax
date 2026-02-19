@@ -1,0 +1,217 @@
+[form]
+number = "1099-INT"
+title = "Interest Income"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099int"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "fatca_filing_requirement"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+[[fields]]
+box = "second_tin_not"
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number (see instructions)"
+type = "string"
+required = false
+
+[[fields]]
+box = "payer_rtn"
+name = "payer_rtn"
+label = "Payer's RTN (optional)"
+type = "string"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "interest_income"
+label = "Interest income"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "early_withdrawal_penalty"
+label = "Early withdrawal penalty"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "interest_us_savings_bonds_treasury"
+label = "Interest on U.S. Savings Bonds and Treasury obligations"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "investment_expenses"
+label = "Investment expenses"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "foreign_tax_paid"
+label = "Foreign tax paid"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "foreign_country_or_us_possession"
+label = "Foreign country or U.S. possession"
+type = "string"
+required = false
+
+[[fields]]
+box = "8"
+name = "tax_exempt_interest"
+label = "Tax-exempt interest"
+type = "usd"
+required = false
+
+[[fields]]
+box = "9"
+name = "specified_private_activity_bond_interest"
+label = "Specified private activity bond interest"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "market_discount"
+label = "Market discount"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "bond_premium"
+label = "Bond premium"
+type = "usd"
+required = false
+
+[[fields]]
+box = "12"
+name = "bond_premium_treasury"
+label = "Bond premium on Treasury obligations"
+type = "usd"
+required = false
+
+[[fields]]
+box = "13"
+name = "bond_premium_tax_exempt_bond"
+label = "Bond premium on tax-exempt bond"
+type = "usd"
+required = false
+
+[[fields]]
+box = "14"
+name = "tax_exempt_and_tax_credit_bond_cusip"
+label = "Tax-exempt and tax credit bond CUSIP no."
+type = "string"
+required = false
+
+# ── State information (first row) ──────────────────────────────────
+
+[[fields]]
+box = "15"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_id_number_1"
+label = "Payer's state identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_tax_withheld_1"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+# ── State information (second row) ─────────────────────────────────
+
+[[fields]]
+box = "15"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_id_number_2"
+label = "Payer's state identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_tax_withheld_2"
+label = "State tax withheld"
+type = "usd"
+required = false

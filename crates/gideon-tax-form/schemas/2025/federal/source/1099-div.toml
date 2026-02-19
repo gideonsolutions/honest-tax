@@ -1,0 +1,238 @@
+[form]
+number = "1099-DIV"
+title = "Dividends and Distributions"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099div"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "second_tin_not"
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number (see instructions)"
+type = "string"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1a"
+name = "total_ordinary_dividends"
+label = "Total ordinary dividends"
+type = "usd"
+
+[[fields]]
+box = "1b"
+name = "qualified_dividends"
+label = "Qualified dividends"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2a"
+name = "total_capital_gain_distr"
+label = "Total capital gain distr."
+type = "usd"
+required = false
+
+[[fields]]
+box = "2b"
+name = "unrecap_sec_1250_gain"
+label = "Unrecap. Sec. 1250 gain"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2c"
+name = "section_1202_gain"
+label = "Section 1202 gain"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2d"
+name = "collectibles_28_rate_gain"
+label = "Collectibles (28%) gain"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2e"
+name = "section_897_ordinary_dividends"
+label = "Section 897 ordinary dividends"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2f"
+name = "section_897_capital_gain"
+label = "Section 897 capital gain"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "nondividend_distributions"
+label = "Nondividend distributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "section_199a_dividends"
+label = "Section 199A dividends"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "investment_expenses"
+label = "Investment expenses"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "foreign_tax_paid"
+label = "Foreign tax paid"
+type = "usd"
+required = false
+
+[[fields]]
+box = "8"
+name = "foreign_country_or_us_possession"
+label = "Foreign country or U.S. possession"
+type = "string"
+required = false
+
+[[fields]]
+box = "9"
+name = "cash_liquidation_distributions"
+label = "Cash liquidation distributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "noncash_liquidation_distributions"
+label = "Noncash liquidation distributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+[[fields]]
+box = "12"
+name = "exempt_interest_dividends"
+label = "Exempt-interest dividends"
+type = "usd"
+required = false
+
+[[fields]]
+box = "13"
+name = "specified_private_activity_bond_interest_dividends"
+label = "Specified private activity bond interest dividends"
+type = "usd"
+required = false
+
+# ── State information (first row) ──────────────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_id_number_1"
+label = "Payer's state identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_1"
+label = "State tax withheld"
+type = "usd"
+required = false
+
+# ── State information (second row) ─────────────────────────────────
+
+[[fields]]
+box = "14"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "state_id_number_2"
+label = "Payer's state identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_tax_withheld_2"
+label = "State tax withheld"
+type = "usd"
+required = false

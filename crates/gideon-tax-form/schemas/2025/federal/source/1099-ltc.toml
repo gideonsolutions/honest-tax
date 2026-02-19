@@ -1,0 +1,107 @@
+[form]
+number = "1099-LTC"
+title = "Long-Term Care and Accelerated Death Benefits"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099ltc"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+name = "payer_name_address_phone"
+label = "Payer's name, address, and telephone number"
+type = "string"
+
+[[fields]]
+name = "payer_federal_id"
+label = "Payer's federal identification number"
+type = "ein"
+
+[[fields]]
+name = "policyholder_name_address"
+label = "Policyholder's name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+name = "policyholder_tin"
+label = "Policyholder's TIN"
+type = "string"
+
+[[fields]]
+name = "insured_name_address"
+label = "Insured's name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+name = "insured_tin"
+label = "Insured's social security number"
+type = "ssn"
+
+[[fields]]
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "gross_ltc_benefits_paid"
+label = "Gross long-term care benefits paid"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "accelerated_death_benefits_paid"
+label = "Accelerated death benefits paid"
+type = "usd"
+required = false
+
+# ── Box 3 — Per diem or reimbursed (checkboxes) ───────────────────────
+
+[[fields]]
+box = "3"
+name = "per_diem"
+label = "Per diem"
+type = "bool"
+required = false
+
+[[fields]]
+box = "3"
+name = "reimbursed_amount"
+label = "Reimbursed amount"
+type = "bool"
+required = false
+
+# ── Box 4 — Qualified contract (checkbox, optional) ───────────────────
+
+[[fields]]
+box = "4"
+name = "qualified_contract"
+label = "Qualified contract"
+type = "bool"
+required = false
+
+# ── Box 5 — Illness status and date (checkboxes + date) ───────────────
+
+[[fields]]
+box = "5"
+name = "chronically_ill"
+label = "Chronically ill"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5"
+name = "terminally_ill"
+label = "Terminally ill"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5"
+name = "date_certified"
+label = "Date certified"
+type = "date"
+required = false

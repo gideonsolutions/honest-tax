@@ -1,0 +1,127 @@
+[form]
+number = "1098"
+title = "Mortgage Interest Statement"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1098"
+
+# ── Identification ─────────────────────────────────────────────────
+
+[[fields]]
+box = "header"
+name = "recipient_lender_tin"
+label = "RECIPIENT'S/LENDER'S TIN"
+type = "ein"
+
+[[fields]]
+box = "header"
+name = "recipient_lender_name_address"
+label = "RECIPIENT'S/LENDER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "header"
+name = "payer_borrower_tin"
+label = "PAYER'S/BORROWER'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "header"
+name = "payer_borrower_name"
+label = "PAYER'S/BORROWER'S name"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "payer_borrower_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "payer_borrower_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Data boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "mortgage_interest_received"
+label = "Mortgage interest received from payer(s)/borrower(s)"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "outstanding_mortgage_principal"
+label = "Outstanding mortgage principal"
+type = "usd"
+
+[[fields]]
+box = "3"
+name = "mortgage_origination_date"
+label = "Mortgage origination date"
+type = "date"
+
+[[fields]]
+box = "4"
+name = "refund_of_overpaid_interest"
+label = "Refund of overpaid interest"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "mortgage_insurance_premiums"
+label = "Mortgage insurance premiums"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "points_paid_on_purchase"
+label = "Points paid on purchase of principal residence"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "address_is_same_as_borrower"
+label = "If address of property securing mortgage is the same as PAYER'S/BORROWER'S address, check the box, or enter the address or description in box 8"
+type = "bool"
+required = false
+
+[[fields]]
+box = "8"
+name = "property_address"
+label = "Address or description of property securing mortgage"
+type = "string"
+required = false
+
+[[fields]]
+box = "9"
+name = "number_of_mortgaged_properties"
+label = "Number of mortgaged properties"
+type = "integer"
+required = false
+
+[[fields]]
+box = "10"
+name = "other"
+label = "Other"
+type = "string"
+required = false
+
+[[fields]]
+box = "11"
+name = "mortgage_acquisition_date"
+label = "Mortgage acquisition date"
+type = "date"
+required = false

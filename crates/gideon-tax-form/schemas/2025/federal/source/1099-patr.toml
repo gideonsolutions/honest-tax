@@ -1,0 +1,135 @@
+[form]
+number = "1099-PATR"
+title = "Taxable Distributions Received From Cooperatives"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099ptr"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+name = "payer_name_address_phone"
+label = "Payer's name, address, and telephone number"
+type = "string"
+
+[[fields]]
+name = "payer_tin"
+label = "Payer's TIN"
+type = "ein"
+
+[[fields]]
+name = "recipient_tin"
+label = "Recipient's TIN"
+type = "string"
+
+[[fields]]
+name = "recipient_name_address"
+label = "Recipient's name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "patronage_dividends"
+label = "Patronage dividends"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2"
+name = "nonpatronage_distributions"
+label = "Nonpatronage distributions"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "per_unit_retain_allocations"
+label = "Per-unit retain allocations"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "redeemed_nonqualified_notices"
+label = "Redeemed nonqualified notices"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "section_199a_g_deduction"
+label = "Section 199A(g) deduction"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "qualified_payments"
+label = "Qualified payments (Section 199A(b)(7))"
+type = "usd"
+required = false
+
+[[fields]]
+box = "8"
+name = "section_199a_a_qualified_items"
+label = "Section 199A(a) qualified items"
+type = "usd"
+required = false
+
+[[fields]]
+box = "9"
+name = "section_199a_a_sstb_items"
+label = "Section 199A(a) SSTB items"
+type = "usd"
+required = false
+
+[[fields]]
+box = "10"
+name = "investment_credit"
+label = "Investment credit"
+type = "usd"
+required = false
+
+[[fields]]
+box = "11"
+name = "work_opportunity_credit"
+label = "Work opportunity credit"
+type = "usd"
+required = false
+
+[[fields]]
+box = "12"
+name = "other_credits_and_deductions"
+label = "Other credits and deductions"
+type = "usd"
+required = false
+
+# ── Box 13 — Specified cooperative (checkbox) ─────────────────────────
+
+[[fields]]
+box = "13"
+name = "specified_cooperative"
+label = "Specified agricultural or horticultural cooperative"
+type = "bool"
+required = false

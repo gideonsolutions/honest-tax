@@ -1,0 +1,66 @@
+[form]
+number = "1098-E"
+title = "Student Loan Interest Statement"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1098et"
+
+# ── Identification ─────────────────────────────────────────────────
+
+[[fields]]
+box = "header"
+name = "recipient_lender_tin"
+label = "RECIPIENT'S/LENDER'S TIN"
+type = "ein"
+
+[[fields]]
+box = "header"
+name = "recipient_lender_name_address"
+label = "RECIPIENT'S/LENDER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "header"
+name = "borrower_tin"
+label = "BORROWER'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "header"
+name = "borrower_name"
+label = "BORROWER'S name"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "borrower_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "borrower_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Data boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "student_loan_interest_received"
+label = "Student loan interest received by lender"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "no_origination_fee_or_capitalized_interest"
+label = "Check if box 1 does not include loan origination fees and/or capitalized interest"
+type = "bool"
+required = false

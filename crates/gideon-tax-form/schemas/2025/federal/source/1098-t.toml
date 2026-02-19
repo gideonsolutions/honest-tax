@@ -1,0 +1,111 @@
+[form]
+number = "1098-T"
+title = "Tuition Statement"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1098et"
+
+# ── Identification ─────────────────────────────────────────────────
+
+[[fields]]
+box = "header"
+name = "filer_ein"
+label = "FILER'S employer identification no."
+type = "ein"
+
+[[fields]]
+box = "header"
+name = "filer_name_address"
+label = "FILER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "header"
+name = "student_tin"
+label = "STUDENT'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "header"
+name = "student_name"
+label = "STUDENT'S name"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "student_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "student_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Data boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "payments_received"
+label = "Payments received for qualified tuition and related expenses"
+type = "usd"
+
+# Box 2 — Reserved for future use.
+# Box 3 — Reserved for future use.
+
+[[fields]]
+box = "4"
+name = "adjustments_prior_year"
+label = "Adjustments made for a prior year"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "scholarships_or_grants"
+label = "Scholarships or grants"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "adjustments_scholarships_prior_year"
+label = "Adjustments to scholarships or grants for a prior year"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "includes_next_year_period"
+label = "Check if the amount in box 1 includes amounts for an academic period beginning January-March of the next year"
+type = "bool"
+required = false
+
+[[fields]]
+box = "8"
+name = "half_time_student"
+label = "Check if at least half-time student"
+type = "bool"
+required = false
+
+[[fields]]
+box = "9"
+name = "graduate_student"
+label = "Check if a graduate student"
+type = "bool"
+required = false
+
+[[fields]]
+box = "10"
+name = "insurance_contract_reimbursement"
+label = "Insurance contract reimbursement/refund"
+type = "usd"
+required = false

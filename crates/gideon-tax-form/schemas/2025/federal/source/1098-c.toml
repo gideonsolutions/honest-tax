@@ -1,0 +1,168 @@
+[form]
+number = "1098-C"
+title = "Contributions of Motor Vehicles, Boats, and Airplanes"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1098c"
+
+# ── Identification ─────────────────────────────────────────────────
+
+[[fields]]
+box = "header"
+name = "donee_tin"
+label = "DONEE'S TIN"
+type = "ein"
+
+[[fields]]
+box = "header"
+name = "donee_name_address"
+label = "DONEE'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "header"
+name = "donor_tin"
+label = "DONOR'S TIN"
+type = "ssn"
+
+[[fields]]
+box = "header"
+name = "donor_name"
+label = "DONOR'S name"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "donor_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "header"
+name = "donor_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+# ── Vehicle information ────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "date_of_contribution"
+label = "Date of contribution"
+type = "date"
+
+[[fields]]
+box = "2a"
+name = "odometer_mileage"
+label = "Odometer mileage"
+type = "integer"
+required = false
+
+[[fields]]
+box = "2b"
+name = "year"
+label = "Year"
+type = "string"
+
+[[fields]]
+box = "2c"
+name = "make"
+label = "Make"
+type = "string"
+
+[[fields]]
+box = "2d"
+name = "model"
+label = "Model"
+type = "string"
+
+[[fields]]
+box = "3"
+name = "vehicle_identification_number"
+label = "Vehicle or other identification number"
+type = "string"
+
+# ── Sale information ───────────────────────────────────────────────
+
+[[fields]]
+box = "4a"
+name = "arms_length_transaction"
+label = "Donee certifies that vehicle was sold in arm's length transaction to unrelated party"
+type = "bool"
+required = false
+
+[[fields]]
+box = "4b"
+name = "date_of_sale"
+label = "Date of sale"
+type = "date"
+required = false
+
+[[fields]]
+box = "4c"
+name = "gross_proceeds_from_sale"
+label = "Gross proceeds from sale"
+type = "usd"
+required = false
+
+# ── Certifications ─────────────────────────────────────────────────
+
+[[fields]]
+box = "5a"
+name = "not_transferred_before_improvements"
+label = "Donee certifies that vehicle will not be transferred before completion of material improvements"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5b"
+name = "transferred_to_needy_individual"
+label = "Donee certifies that vehicle is to be transferred to a needy individual for significantly below fair market value in furtherance of donee's charitable purpose"
+type = "bool"
+required = false
+
+[[fields]]
+box = "5c"
+name = "improvements_description"
+label = "Donee certifies the following detailed description of material improvements or significant intervening use and duration of use"
+type = "string"
+required = false
+
+# ── Goods and services ────────────────────────────────────────────
+
+[[fields]]
+box = "6a"
+name = "goods_or_services_provided"
+label = "Did the donee provide goods or services in exchange for the vehicle?"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6b"
+name = "value_of_goods_or_services"
+label = "Value of goods and services provided in exchange for the vehicle"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6c"
+name = "intangible_religious_benefits_only"
+label = "If the answer to 6a is 'Yes,' donee certifies that the goods and services consisted solely of intangible religious benefits"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6c"
+name = "goods_services_description"
+label = "Describe the goods and services"
+type = "string"
+required = false
+
+# ── Under $500 ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "7"
+name = "under_500"
+label = "Under the law, the donor may not claim a deduction of more than $500 for this vehicle if this box is checked"
+type = "bool"
+required = false

@@ -1,0 +1,169 @@
+[form]
+number = "1099-G"
+title = "Certain Government Payments"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099g"
+
+# ── Identification ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "payer_tin"
+name = "payer_tin"
+label = "PAYER'S TIN"
+type = "tin"
+
+[[fields]]
+box = "payer_name_address"
+name = "payer_name_address"
+label = "PAYER'S name, street address, city or town, state or province, country, ZIP or foreign postal code, and telephone no."
+type = "string"
+
+[[fields]]
+box = "recipient_tin"
+name = "recipient_tin"
+label = "RECIPIENT'S TIN"
+type = "tin"
+
+[[fields]]
+box = "recipient_name"
+name = "recipient_name"
+label = "RECIPIENT'S name"
+type = "string"
+
+[[fields]]
+box = "recipient_address"
+name = "recipient_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "recipient_city_state_zip"
+name = "recipient_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "2nd_tin_not"
+name = "second_tin_not"
+label = "2nd TIN not."
+type = "bool"
+required = false
+
+# ── Numbered boxes ─────────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "unemployment_compensation"
+label = "Unemployment compensation"
+type = "usd"
+required = false
+
+[[fields]]
+box = "2"
+name = "state_or_local_income_tax_refunds"
+label = "State or local income tax refunds, credits, or offsets"
+type = "usd"
+required = false
+
+[[fields]]
+box = "3"
+name = "box_2_amount_is_for_tax_year"
+label = "Box 2 amount is for tax year"
+type = "string"
+required = false
+
+[[fields]]
+box = "4"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+box = "5"
+name = "rtaa_payments"
+label = "RTAA payments"
+type = "usd"
+required = false
+
+[[fields]]
+box = "6"
+name = "taxable_grants"
+label = "Taxable grants"
+type = "usd"
+required = false
+
+[[fields]]
+box = "7"
+name = "agriculture_payments"
+label = "Agriculture payments"
+type = "usd"
+required = false
+
+[[fields]]
+box = "8"
+name = "check_if_box_2_is_trade_or_business_income"
+label = "Check if box 2 is trade or business income"
+type = "bool"
+required = false
+
+[[fields]]
+box = "9"
+name = "market_gain"
+label = "Market gain"
+type = "usd"
+required = false
+
+# ── State information (first row) ──────────────────────────────────────
+
+[[fields]]
+box = "10a"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "10b"
+name = "state_identification_number_1"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "11"
+name = "state_income_tax_withheld_1"
+label = "State income tax withheld"
+type = "usd"
+required = false
+
+# ── State information (second row) ─────────────────────────────────────
+
+[[fields]]
+box = "10a"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "10b"
+name = "state_identification_number_2"
+label = "State identification no."
+type = "string"
+required = false
+
+[[fields]]
+box = "11"
+name = "state_income_tax_withheld_2"
+label = "State income tax withheld"
+type = "usd"
+required = false

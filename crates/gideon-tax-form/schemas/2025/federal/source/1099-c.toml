@@ -1,0 +1,126 @@
+[form]
+number = "1099-C"
+title = "Cancellation of Debt"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/i1099ac"
+
+# ── Identification ──────────────────────────────────────────────────
+
+[[fields]]
+box = "creditor_tin"
+name = "creditor_tin"
+label = "CREDITOR'S TIN"
+type = "tin"
+
+[[fields]]
+box = "creditor_name_address"
+name = "creditor_name_address"
+label = "CREDITOR'S name, street address, city or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "creditor_phone"
+name = "creditor_phone"
+label = "CREDITOR'S telephone number"
+type = "string"
+required = false
+
+[[fields]]
+box = "debtor_tin"
+name = "debtor_tin"
+label = "DEBTOR'S TIN"
+type = "tin"
+
+[[fields]]
+box = "debtor_name"
+name = "debtor_name"
+label = "DEBTOR'S name"
+type = "string"
+
+[[fields]]
+box = "debtor_address"
+name = "debtor_address"
+label = "Street address (including apt. no.)"
+type = "string"
+
+[[fields]]
+box = "debtor_city_state_zip"
+name = "debtor_city_state_zip"
+label = "City or town, state or province, country, and ZIP or foreign postal code"
+type = "string"
+
+[[fields]]
+box = "account_number"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+[[fields]]
+box = "fatca"
+name = "fatca_filing_requirement"
+label = "FATCA filing requirement"
+type = "bool"
+required = false
+
+# ── Numbered boxes ──────────────────────────────────────────────────
+
+[[fields]]
+box = "1"
+name = "date_of_identifiable_event"
+label = "Date of identifiable event"
+type = "date"
+
+[[fields]]
+box = "2"
+name = "amount_of_debt_discharged"
+label = "Amount of debt discharged"
+type = "usd"
+
+[[fields]]
+box = "3"
+name = "interest_if_included_in_box_2"
+label = "Interest if included in box 2"
+type = "usd"
+required = false
+
+[[fields]]
+box = "4"
+name = "debt_description"
+label = "Debt description"
+type = "string"
+
+[[fields]]
+box = "5"
+name = "personally_liable"
+label = "Check here if the debtor was personally liable for repayment of the debt"
+type = "bool"
+required = false
+
+[[fields]]
+box = "6"
+name = "identifiable_event_code"
+label = "Identifiable event code"
+type = "string"
+
+[[fields]]
+box = "7"
+name = "fmv_of_property"
+label = "Fair market value of property"
+type = "usd"
+required = false
+
+# ── Identifiable event code values ──────────────────────────────────
+#
+# These are the valid codes for the identifiable_event_code field (box 6).
+
+[enums.identifiable_event_code]
+A = "Discharge in bankruptcy under title 11 of the U.S. Code"
+B = "Cancellation in receivership, foreclosure, or similar court proceeding other than bankruptcy"
+C = "Statute of limitations expired or deficiency period lapsed"
+D = "Foreclosure remedies that bar creditor's right to collect the debt"
+E = "Debt unenforceable under probate or similar proceeding"
+F = "Discharge through creditor-debtor agreement at less than full consideration (e.g., short sale)"
+G = "Discharge due to creditor's decision or defined policy to discontinue collection activity"
+H = "Other actual discharge before an identifiable event"
