@@ -1,0 +1,28 @@
+[form]
+number = "Schedule EIC"
+title = "Earned Income Credit"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/forms-pubs/about-schedule-eic-form-1040"
+
+# Schedule EIC collects qualifying child information for the Earned Income Credit.
+# Up to 3 qualifying children. Each child has the same set of fields (lines 1-6).
+
+# ── Qualifying Child Information ─────────────────────────────────
+
+[[fields]]
+line = "1-6"
+name = "qualifying_children"
+label = "Qualifying child information"
+type = "list"
+required = false
+
+[fields.items]
+child_first_name = "string"
+child_last_name = "string"
+child_ssn = "ssn"
+child_year_of_birth = "integer"
+under_24_student = "bool"
+permanently_disabled = "bool"
+relationship = "string"
+months_lived_with_you = "integer"

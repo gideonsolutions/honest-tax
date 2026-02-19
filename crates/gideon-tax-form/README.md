@@ -69,6 +69,7 @@ individual's **tax return**.
 | `schedule-h.toml` | Schedule H (Form 1040) | Household Employment Taxes |
 | `schedule-j.toml` | Schedule J (Form 1040) | Income Averaging for Farmers and Fishermen |
 | `schedule-r.toml` | Schedule R (Form 1040) | Credit for the Elderly or the Disabled |
+| `schedule-eic.toml` | Schedule EIC (Form 1040) | Earned Income Credit |
 | `schedule-se.toml` | Schedule SE (Form 1040) | Self-Employment Tax |
 | `8949.toml` | Form 8949 | Sales and Other Dispositions of Capital Assets |
 | `8959.toml` | Form 8959 | Additional Medicare Tax |
