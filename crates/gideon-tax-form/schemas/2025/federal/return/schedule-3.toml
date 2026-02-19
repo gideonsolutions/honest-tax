@@ -1,0 +1,264 @@
+[form]
+number = "Schedule 3"
+title = "Additional Credits and Payments"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040gi"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "header"
+name = "name"
+label = "Name(s) shown on Form 1040, 1040-SR, or 1040-NR"
+type = "string"
+
+[[fields]]
+line = "header"
+name = "ssn"
+label = "Your social security number"
+type = "ssn"
+
+# ── Part I — Nonrefundable Credits ─────────────────────────────────
+
+[[fields]]
+line = "1"
+name = "foreign_tax_credit"
+label = "Foreign tax credit. Attach Form 1116 if required"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2"
+name = "child_dependent_care"
+label = "Credit for child and dependent care expenses. Attach Form 2441"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "education_credits"
+label = "Education credits from Form 8863, line 19"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "retirement_savings"
+label = "Retirement savings contributions credit. Attach Form 8880"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5a"
+name = "residential_clean_energy"
+label = "Residential clean energy credit. Attach Form 5695"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5b"
+name = "energy_efficient_home"
+label = "Energy efficient home improvement credit. Attach Form 5695"
+type = "usd"
+required = false
+
+# ── Lines 6a–6z — Other nonrefundable credits ──────────────────────
+
+[[fields]]
+line = "6a"
+name = "general_business_credit"
+label = "General business credit. Attach Form 3800"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6b"
+name = "prior_year_minimum_tax"
+label = "Credit for prior year minimum tax. Attach Form 8801"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6c"
+name = "adoption_credit"
+label = "Adoption credit. Attach Form 8839"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6d"
+name = "elderly_disabled_credit"
+label = "Credit for the elderly or the disabled. Attach Schedule R"
+type = "usd"
+required = false
+
+# Line 6e — Reserved for future use.
+
+[[fields]]
+line = "6f"
+name = "clean_vehicle_credit"
+label = "Clean vehicle credit. Attach Form 8936"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6g"
+name = "mortgage_interest_credit"
+label = "Mortgage interest credit. Attach Form 8396"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6h"
+name = "dc_homebuyer_credit"
+label = "District of Columbia first-time homebuyer credit. Attach Form 8859"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6i"
+name = "qualified_ev_credit"
+label = "Qualified electric vehicle credit. Attach Form 8834"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6j"
+name = "alt_fuel_refueling"
+label = "Alternative fuel vehicle refueling property credit. Attach Form 8911"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6k"
+name = "tax_credit_bonds"
+label = "Credit to holders of tax credit bonds. Attach Form 8912"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6l"
+name = "amount_form_8978"
+label = "Amount on Form 8978, line 14"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6m"
+name = "prev_owned_clean_vehicle"
+label = "Credit for previously owned clean vehicles. Attach Form 8936"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6z"
+name = "other_nonrefundable_credits_type"
+label = "Other nonrefundable credits. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "6z"
+name = "other_nonrefundable_credits"
+label = "Other nonrefundable credits amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "total_other_nonrefundable"
+label = "Total other nonrefundable credits. Add lines 6a through 6z"
+type = "usd"
+
+[[fields]]
+line = "8"
+name = "total_nonrefundable_credits"
+label = "Add lines 1 through 5b and 7. Enter here and on Form 1040, line 20"
+type = "usd"
+
+# ── Part II — Other Payments and Refundable Credits ────────────────
+
+[[fields]]
+line = "9"
+name = "net_premium_tax_credit"
+label = "Net premium tax credit. Attach Form 8962"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "extension_payment"
+label = "Amount paid with request for extension to file"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "excess_ss_withheld"
+label = "Excess social security and tier 1 RRTA tax withheld"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "fuel_tax_credit"
+label = "Credit for federal tax on fuels. Attach Form 4136"
+type = "usd"
+required = false
+
+# ── Lines 13a–13z — Other payments or refundable credits ───────────
+
+[[fields]]
+line = "13a"
+name = "form_2439"
+label = "Form 2439"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13b"
+name = "section_1341_credit"
+label = "Credit for repayment of amounts included in income from earlier years"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13c"
+name = "elective_payment"
+label = "Net elective payment election amount from Form 3800, Part III, line 6, column (j)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13d"
+name = "deferred_965_liability"
+label = "Deferred amount of net 965 tax liability"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13z"
+name = "other_refundable_credits_type"
+label = "Other payments or refundable credits. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "13z"
+name = "other_refundable_credits"
+label = "Other payments or refundable credits amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "total_other_payments"
+label = "Total other payments or refundable credits. Add lines 13a through 13z"
+type = "usd"
+
+[[fields]]
+line = "15"
+name = "total_payments_credits"
+label = "Add lines 9 through 12 and 14. Enter here and on Form 1040, line 31"
+type = "usd"

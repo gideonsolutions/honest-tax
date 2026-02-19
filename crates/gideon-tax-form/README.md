@@ -58,6 +58,7 @@ individual's **tax return**.
 |------|------|-------|
 | `1040.toml` | 1040 | U.S. Individual Income Tax Return |
 | `schedule-1.toml` | Schedule 1 (Form 1040) | Additional Income and Adjustments to Income |
+| `schedule-1-a.toml` | Schedule 1-A (Form 1040) | Additional Deductions |
 | `schedule-2.toml` | Schedule 2 (Form 1040) | Additional Taxes |
 | `schedule-3.toml` | Schedule 3 (Form 1040) | Additional Credits and Payments |
 | `schedule-a.toml` | Schedule A (Form 1040) | Itemized Deductions |
