@@ -1,0 +1,300 @@
+[form]
+number = "W-2"
+title = "Wage and Tax Statement"
+year = 2025
+category = "source"
+url = "https://www.irs.gov/instructions/iw2w3"
+
+# ── Identification (lettered boxes) ──────────────────────────────────
+
+[[fields]]
+box = "a"
+name = "employee_ssn"
+label = "Employee's social security number"
+type = "ssn"
+
+[[fields]]
+box = "b"
+name = "employer_ein"
+label = "Employer identification number (EIN)"
+type = "ein"
+
+[[fields]]
+box = "c"
+name = "employer_name_address"
+label = "Employer's name, address, and ZIP code"
+type = "string"
+
+[[fields]]
+box = "d"
+name = "control_number"
+label = "Control number"
+type = "string"
+required = false
+
+[[fields]]
+box = "e"
+name = "employee_name"
+label = "Employee's first name and initial, last name, Suff."
+type = "string"
+
+[[fields]]
+box = "f"
+name = "employee_address"
+label = "Employee's address and ZIP code"
+type = "string"
+
+# ── Wage and tax data (numbered boxes) ───────────────────────────────
+
+[[fields]]
+box = "1"
+name = "wages_tips_other_comp"
+label = "Wages, tips, other compensation"
+type = "usd"
+
+[[fields]]
+box = "2"
+name = "federal_income_tax_withheld"
+label = "Federal income tax withheld"
+type = "usd"
+
+[[fields]]
+box = "3"
+name = "social_security_wages"
+label = "Social security wages"
+type = "usd"
+
+[[fields]]
+box = "4"
+name = "social_security_tax_withheld"
+label = "Social security tax withheld"
+type = "usd"
+
+[[fields]]
+box = "5"
+name = "medicare_wages_and_tips"
+label = "Medicare wages and tips"
+type = "usd"
+
+[[fields]]
+box = "6"
+name = "medicare_tax_withheld"
+label = "Medicare tax withheld"
+type = "usd"
+
+[[fields]]
+box = "7"
+name = "social_security_tips"
+label = "Social security tips"
+type = "usd"
+
+[[fields]]
+box = "8"
+name = "allocated_tips"
+label = "Allocated tips"
+type = "usd"
+
+# Box 9 — intentionally omitted (blank since 2011).
+
+[[fields]]
+box = "10"
+name = "dependent_care_benefits"
+label = "Dependent care benefits"
+type = "usd"
+
+[[fields]]
+box = "11"
+name = "nonqualified_plans"
+label = "Nonqualified plans"
+type = "usd"
+
+# ── Box 12 (coded entries, arbitrary count) ──────────────────────────
+
+[[fields]]
+box = "12"
+name = "box_12"
+label = "Coded entries"
+type = "list"
+
+[fields.items]
+code = "box_12_code"
+amount = "usd"
+
+# ── Box 13 (checkboxes) ──────────────────────────────────────────────
+
+[[fields]]
+box = "13"
+name = "statutory_employee"
+label = "Statutory employee"
+type = "bool"
+
+[[fields]]
+box = "13"
+name = "retirement_plan"
+label = "Retirement plan"
+type = "bool"
+
+[[fields]]
+box = "13"
+name = "third_party_sick_pay"
+label = "Third-party sick pay"
+type = "bool"
+
+# ── Box 14 ───────────────────────────────────────────────────────────
+
+[[fields]]
+box = "14a"
+name = "box_14a_other"
+label = "Other"
+type = "string"
+required = false
+
+[[fields]]
+box = "14b"
+name = "treasury_tipped_occupation_codes"
+label = "Treasury Tipped Occupation Code(s)"
+type = "string"
+# Expected format: comma-separated list of Treasury tipped occupation codes,
+# e.g. "12,34,56". Whitespace around commas may be included and should be ignored.
+required = false
+
+# ── State and local (boxes 15–20, two rows) ──────────────────────────
+
+[[fields]]
+box = "15"
+name = "state_1"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "employer_state_id_1"
+label = "Employer's state ID number"
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_wages_1"
+label = "State wages, tips, etc."
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_income_tax_1"
+label = "State income tax"
+type = "usd"
+required = false
+
+[[fields]]
+box = "18"
+name = "local_wages_1"
+label = "Local wages, tips, etc."
+type = "usd"
+required = false
+
+[[fields]]
+box = "19"
+name = "local_income_tax_1"
+label = "Local income tax"
+type = "usd"
+required = false
+
+[[fields]]
+box = "20"
+name = "locality_name_1"
+label = "Locality name"
+type = "string"
+required = false
+
+# ── State and local (second row) ─────────────────────────────────────
+
+[[fields]]
+box = "15"
+name = "state_2"
+label = "State"
+type = "state"
+required = false
+
+[[fields]]
+box = "15"
+name = "employer_state_id_2"
+label = "Employer's state ID number"
+type = "string"
+required = false
+
+[[fields]]
+box = "16"
+name = "state_wages_2"
+label = "State wages, tips, etc."
+type = "usd"
+required = false
+
+[[fields]]
+box = "17"
+name = "state_income_tax_2"
+label = "State income tax"
+type = "usd"
+required = false
+
+[[fields]]
+box = "18"
+name = "local_wages_2"
+label = "Local wages, tips, etc."
+type = "usd"
+required = false
+
+[[fields]]
+box = "19"
+name = "local_income_tax_2"
+label = "Local income tax"
+type = "usd"
+required = false
+
+[[fields]]
+box = "20"
+name = "locality_name_2"
+label = "Locality name"
+type = "string"
+required = false
+
+# ── Box 12 code values ──────────────────────────────────────────────
+#
+# These are the valid codes for box_12_code fields.
+
+[enums.box_12_code]
+A  = "Uncollected social security or RRTA tax on tips"
+B  = "Uncollected Medicare tax on tips"
+C  = "Taxable cost of group-term life insurance over $50,000"
+D  = "Elective deferrals under a section 401(k) plan"
+E  = "Elective deferrals under a section 403(b) plan"
+F  = "Elective deferrals under a section 408(k)(6) SEP"
+G  = "Elective deferrals and employer contributions to a section 457(b) plan"
+H  = "Elective deferrals under a section 501(c)(18)(D) plan"
+J  = "Nontaxable sick pay"
+K  = "20% excise tax on excess golden parachute payments"
+L  = "Substantiated employee business expense reimbursements"
+M  = "Uncollected social security or RRTA tax on group-term life insurance (former employees)"
+N  = "Uncollected Medicare tax on group-term life insurance (former employees)"
+P  = "Excludable moving expense reimbursements (Armed Forces)"
+Q  = "Nontaxable combat pay"
+R  = "Employer contributions to an Archer MSA"
+S  = "Employee salary reduction contributions under a section 408(p) SIMPLE plan"
+T  = "Adoption benefits"
+V  = "Income from exercise of nonstatutory stock option(s)"
+W  = "Employer contributions to a health savings account (HSA)"
+Y  = "Deferrals under a section 409A nonqualified deferred compensation plan"
+Z  = "Income under a section 409A plan failing to satisfy section 409A"
+AA = "Designated Roth contributions under a section 401(k) plan"
+BB = "Designated Roth contributions under a section 403(b) plan"
+DD = "Cost of employer-sponsored health coverage"
+EE = "Designated Roth contributions under a governmental section 457(b) plan"
+FF = "Permitted benefits under a qualified small employer HRA"
+GG = "Income from qualified equity grants under section 83(i)"
+HH = "Aggregate deferrals under section 83(i) elections as of year-end"
+II = "Medicaid waiver payments excluded under Notice 2014-7"
+TA = "Employer contributions to Trump accounts under section 128"
+TP = "Total cash tips reported to employer"
+TT = "Total qualified overtime compensation"
