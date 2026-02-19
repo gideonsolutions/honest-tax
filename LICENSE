@@ -1,176 +1,296 @@
-                                 Apache License
-                           Version 2.0, January 2004
-                        http://www.apache.org/licenses/
+# Gideon Christian Open Source License (GCOSL)
 
-   TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION
+**Version 1.0**
+**Effective Date: February 7, 2026**
+**Copyright (c) 2026 Gideon Solutions, LLC. All rights reserved.**
 
-   1. Definitions.
+---
 
-      "License" shall mean the terms and conditions for use, reproduction,
-      and distribution as defined by Sections 1 through 9 of this document.
+## 1. Definitions
 
-      "Licensor" shall mean the copyright owner or entity authorized by
-      the copyright owner that is granting the License.
+**"License"** means this Gideon Christian Open Source License, Version 1.0.
 
-      "Legal Entity" shall mean the union of the acting entity and all
-      other entities that control, are controlled by, or are under common
-      control with that entity. For the purposes of this definition,
-      "control" means (i) the power, direct or indirect, to cause the
-      direction or management of such entity, whether by contract or
-      otherwise, or (ii) ownership of fifty percent (50%) or more of the
-      outstanding shares, or (iii) beneficial ownership of such entity.
+**"Licensor"** means [Gideon Solutions, LLC](https://www.gideonsolutions.us/), the sole copyright holder and licensor of the Software.
 
-      "You" (or "Your") shall mean an individual or Legal Entity
-      exercising permissions granted by this License.
+**"Software"** means the source code, object code, documentation, configuration files, and all associated materials distributed under this License.
 
-      "Source" form shall mean the preferred form for making modifications,
-      including but not limited to software source code, documentation
-      source, and configuration files.
+**"You" (or "Your")** means any individual or legal entity exercising rights under this License.
 
-      "Object" form shall mean any form resulting from mechanical
-      transformation or translation of a Source form, including but
-      not limited to compiled object code, generated documentation,
-      and conversions to other media types.
+**"Non-Commercial Use"** means use of the Software for purposes that do not generate revenue, do not confer commercial advantage, and are not undertaken in the course of trade, business, or professional activity conducted for profit. Non-Commercial Use includes, without limitation: personal use, academic study, educational instruction, nonprofit operations, humanitarian work, and religious ministry.
 
-      "Work" shall mean the work of authorship, whether in Source or
-      Object form, made available under the License, as indicated by a
-      copyright notice that is included in or attached to the work
-      (an example is provided in the Appendix below).
+**"Commercial Use"** means any use of the Software that does not qualify as Non-Commercial Use, including but not limited to: incorporation into products or services offered for sale, use in revenue-generating operations, use in consulting or professional services, and use in internal business operations of a for-profit entity.
 
-      "Derivative Works" shall mean any work, whether in Source or Object
-      form, that is based on (or derived from) the Work and for which the
-      editorial revisions, annotations, elaborations, or other modifications
-      represent, as a whole, an original work of authorship. For the purposes
-      of this License, Derivative Works shall not include works that remain
-      separable from, or merely link (or bind by name) to the interfaces of,
-      the Work and Derivative Works thereof.
+**"Prohibited Use"** means any use described in Section 4 of this License.
 
-      "Contribution" shall mean any work of authorship, including
-      the original version of the Work and any modifications or additions
-      to that Work or Derivative Works thereof, that is intentionally
-      submitted to Licensor for inclusion in the Work by the copyright owner
-      or by an individual or Legal Entity authorized to submit on behalf of
-      the copyright owner. For the purposes of this definition, "submitted"
-      means any form of electronic, verbal, or written communication sent
-      to the Licensor or its representatives, including but not limited to
-      communication on electronic mailing lists, source code control systems,
-      and issue tracking systems that are managed by, or on behalf of, the
-      Licensor for the purpose of discussing and improving the Work, but
-      excluding communication that is conspicuously marked or otherwise
-      designated in writing by the copyright owner as "Not a Contribution."
+**"Derivative Work"** means any work that is based on, incorporates, modifies, adapts, translates, or otherwise transforms the Software, in whole or in part.
 
-      "Contributor" shall mean Licensor and any individual or Legal Entity
-      on behalf of whom a Contribution has been received by Licensor and
-      subsequently incorporated within the Work.
+---
 
-   2. Grant of Copyright License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      copyright license to reproduce, prepare Derivative Works of,
-      publicly display, publicly perform, sublicense, and distribute the
-      Work and such Derivative Works in Source or Object form.
+## 2. Grant of Rights for Non-Commercial Use
 
-   3. Grant of Patent License. Subject to the terms and conditions of
-      this License, each Contributor hereby grants to You a perpetual,
-      worldwide, non-exclusive, no-charge, royalty-free, irrevocable
-      (except as stated in this section) patent license to make, have made,
-      use, offer to sell, sell, import, and otherwise transfer the Work,
-      where such license applies only to those patent claims licensable
-      by such Contributor that are necessarily infringed by their
-      Contribution(s) alone or by combination of their Contribution(s)
-      with the Work to which such Contribution(s) was submitted. If You
-      institute patent litigation against any entity (including a
-      cross-claim or counterclaim in a lawsuit) alleging that the Work
-      or a Contribution incorporated within the Work constitutes direct
-      or contributory patent infringement, then any patent licenses
-      granted to You under this License for that Work shall terminate
-      as of the date such litigation is filed.
+Subject to the terms and conditions of this License, and expressly subject to the restrictions in Sections 3, 4, and 5, the Licensor grants You a worldwide, non-exclusive, non-transferable, non-sublicensable, royalty-free right to:
 
-   4. Redistribution. You may reproduce and distribute copies of the
-      Work or Derivative Works thereof in any medium, with or without
-      modifications, and in Source or Object form, provided that You
-      meet the following conditions:
+(a) Use, copy, and distribute the Software for Non-Commercial Use.
 
-      (a) You must give any other recipients of the Work or
-          Derivative Works a copy of this License; and
+(b) Create Derivative Works of the Software for Non-Commercial Use.
 
-      (b) You must cause any modified files to carry prominent notices
-          stating that You changed the files; and
+(c) Distribute Derivative Works of the Software for Non-Commercial Use, provided that such Derivative Works are distributed under this same License, without modification to the License terms.
 
-      (c) You must retain, in the Source form of any Derivative Works
-          that You distribute, all copyright, patent, trademark, and
-          attribution notices from the Source form of the Work,
-          excluding those notices that do not pertain to any part of
-          the Derivative Works; and
+This grant is conditional. Any violation of any term of this License immediately and automatically terminates all rights granted herein.
 
-      (d) If the Work includes a "NOTICE" text file as part of its
-          distribution, then any Derivative Works that You distribute must
-          include a readable copy of the attribution notices contained
-          within such NOTICE file, excluding those notices that do not
-          pertain to any part of the Derivative Works, in at least one
-          of the following places: within a NOTICE text file distributed
-          as part of the Derivative Works; within the Source form or
-          documentation, if provided along with the Derivative Works; or,
-          within a display generated by the Derivative Works, if and
-          wherever such third-party notices normally appear. The contents
-          of the NOTICE file are for informational purposes only and
-          do not modify the License. You may add Your own attribution
-          notices within Derivative Works that You distribute, alongside
-          or as an addendum to the NOTICE text from the Work, provided
-          that such additional attribution notices cannot be construed
-          as modifying the License.
+---
 
-      You may add Your own copyright statement to Your modifications and
-      may provide additional or different license terms and conditions
-      for use, reproduction, or distribution of Your modifications, or
-      for any such Derivative Works as a whole, provided Your use,
-      reproduction, and distribution of the Work otherwise complies with
-      the conditions stated in this License.
+## 3. Commercial Use Reservation
 
-   5. Submission of Contributions. Unless You explicitly state otherwise,
-      any Contribution intentionally submitted for inclusion in the Work
-      by You to the Licensor shall be under the terms and conditions of
-      this License, without any additional terms or conditions.
-      Notwithstanding the above, nothing herein shall supersede or modify
-      the terms of any separate license agreement you may have executed
-      with Licensor regarding such Contributions.
+All Commercial Use of the Software is exclusively reserved to Gideon Solutions, LLC.
 
-   6. Trademarks. This License does not grant permission to use the trade
-      names, trademarks, service marks, or product names of the Licensor,
-      except as required for reasonable and customary use in describing the
-      origin of the Work and reproducing the content of the NOTICE file.
+No person or entity other than Gideon Solutions, LLC may engage in Commercial Use of the Software or any Derivative Work unless Gideon Solutions, LLC has granted explicit, written permission to that person or entity. Such permission must be signed by an authorized representative of Gideon Solutions, LLC and must specifically identify the scope, duration, and conditions of the permitted Commercial Use.
 
-   7. Disclaimer of Warranty. Unless required by applicable law or
-      agreed to in writing, Licensor provides the Work (and each
-      Contributor provides its Contributions) on an "AS IS" BASIS,
-      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or
-      implied, including, without limitation, any warranties or conditions
-      of TITLE, NON-INFRINGEMENT, MERCHANTABILITY, or FITNESS FOR A
-      PARTICULAR PURPOSE. You are solely responsible for determining the
-      appropriateness of using or redistributing the Work and assume any
-      risks associated with Your exercise of permissions under this License.
+Oral agreements, implied licenses, and informal communications do not constitute written permission under this Section.
 
-   8. Limitation of Liability. In no event and under no legal theory,
-      whether in tort (including negligence), contract, or otherwise,
-      unless required by applicable law (such as deliberate and grossly
-      negligent acts) or agreed to in writing, shall any Contributor be
-      liable to You for damages, including any direct, indirect, special,
-      incidental, or consequential damages of any character arising as a
-      result of this License or out of the use or inability to use the
-      Work (including but not limited to damages for loss of goodwill,
-      work stoppage, computer failure or malfunction, or any and all
-      other commercial damages or losses), even if such Contributor
-      has been advised of the possibility of such damages.
+---
 
-   9. Accepting Warranty or Additional Liability. While redistributing
-      the Work or Derivative Works thereof, You may choose to offer,
-      and charge a fee for, acceptance of support, warranty, indemnity,
-      or other liability obligations and/or rights consistent with this
-      License. However, in accepting such obligations, You may act only
-      on Your own behalf and on Your sole responsibility, not on behalf
-      of any other Contributor, and only if You agree to indemnify,
-      defend, and hold each Contributor harmless for any liability
-      incurred by, or claims asserted against, such Contributor by reason
-      of your accepting any such warranty or additional liability.
+## 4. Prohibited Uses
 
-   END OF TERMS AND CONDITIONS
+Regardless of whether use is commercial or non-commercial, and regardless of the jurisdiction in which use occurs, the Software and any Derivative Work **may not** be used, directly or indirectly, in whole or in part, for any of the following purposes:
+
+### 4.1 Sexual Exploitation and Abuse
+The production, distribution, hosting, facilitation, or promotion of pornography, sexually explicit material, sexual exploitation of any person, or any system or service designed to facilitate the same.
+
+### 4.2 Prostitution and Sex Trafficking
+The facilitation, promotion, management, or operation of prostitution, escort services marketed for sexual purposes, or any form of sex trafficking.
+
+### 4.3 Human Trafficking and Forced Labor
+The facilitation, coordination, management, concealment, or support of human trafficking, forced labor, debt bondage, involuntary servitude, or any form of modern slavery.
+
+### 4.4 Illegal Drug Trade
+The production, manufacture, processing, distribution, sale, marketing, or logistics of illegal drugs, controlled substances used outside of lawful medical prescription, or precursor chemicals intended for illegal drug manufacturing.
+
+### 4.5 Weapons and Armaments
+The design, manufacture, production, sale, distribution, maintenance, targeting, deployment, or logistics of weapons, armaments, munitions, explosives, or weapons systems of any kind, including but not limited to: firearms, missiles, bombs, chemical weapons, biological weapons, radiological weapons, nuclear weapons, autonomous weapons systems, and dual-use technologies intended for weaponization.
+
+### 4.6 Military, Paramilitary, and Mercenary Activities
+Any use by or for the benefit of military forces, paramilitary organizations, mercenary companies, private military contractors, defense ministries, or armed groups of any kind, whether state-sponsored or non-state, for any purpose including but not limited to: combat operations, military logistics, military training, military intelligence, force projection, occupation, or armed conflict.
+
+### 4.7 Intelligence and Surveillance Organizations
+Any use by or for the benefit of intelligence agencies, intelligence services, signals intelligence organizations, or any government or private entity whose primary function includes covert intelligence collection, counterintelligence, or clandestine operations.
+
+### 4.8 Mass Surveillance and Population Profiling
+The construction, operation, or facilitation of systems for mass surveillance, population-scale monitoring, biometric tracking, social scoring, predictive policing, behavioral profiling, or any system designed to monitor, classify, score, or predict the behavior of populations or demographic groups without the informed, voluntary, individual consent of each person monitored.
+
+### 4.9 Violence, Coercion, and Physical Harm
+Any use intended to facilitate, coordinate, plan, execute, or conceal acts of violence, torture, coercion, intimidation, physical harm, or threats of physical harm against any person or group.
+
+### 4.10 Gambling and Predatory Financial Schemes
+The operation or facilitation of gambling platforms, casinos, sports betting systems, lotteries operated for private profit, Ponzi schemes, pyramid schemes, predatory lending, or any financial system designed to extract wealth through deception, addiction, or exploitation of vulnerable persons.
+
+### 4.11 Usury and Interest-Bearing Lending
+
+#### 4.11.1 Prohibition
+
+The facilitation, operation, management, or support of any system, platform, or service that enables lending money at interest, including but not limited to:
+
+(a) Loans, credit instruments, or debt obligations that guarantee the lender a predetermined return on principal.
+
+(b) Financial arrangements in which the lender bears no risk of loss while the borrower bears all downside risk.
+
+(c) Debt instruments structured to produce risk-free profit for the creditor, regardless of the borrower's outcome.
+
+This prohibition applies regardless of the interest rate charged, regardless of whether the rate is characterized as "low," "reasonable," "market-rate," or "below market," and regardless of the institutional form of the lender — whether bank, credit union, fintech platform, peer-to-peer lending service, or any other entity.
+
+#### 4.11.2 Permitted Financial Activities
+
+The prohibition in Section 4.11.1 does not apply to the following financial arrangements, provided they involve genuine shared risk between the parties:
+
+(a) **Profit-sharing arrangements** — where returns to the capital provider are contingent on actual profits generated and the capital provider bears a real risk of loss.
+
+(b) **Revenue-sharing agreements** — where compensation to the capital provider is a percentage of actual revenue, with no guaranteed minimum return.
+
+(c) **Equity participation** — where the capital provider receives an ownership stake and shares proportionally in both gains and losses.
+
+(d) **Dividends based on actual performance** — where distributions are made from realized earnings, not guaranteed in advance, and subject to the performance of the underlying enterprise.
+
+(e) **Staking or participation in shared-risk security protocols** — where participants commit capital to blockchain validation, decentralized consensus, or equivalent shared-risk mechanisms in which the participant's capital is genuinely at risk and returns are not guaranteed.
+
+#### 4.11.3 Inflation-Adjusted Principal Repayment
+
+Interest-free lending that permits repayment of principal adjusted solely to preserve the real value of the original amount against inflation is permitted, subject to all of the following conditions:
+
+(a) The adjustment must not guarantee profit to the lender. It must preserve purchasing power only.
+
+(b) The adjustment must not exceed the measured rate of inflation for the relevant period.
+
+(c) The adjustment must not be set at the discretion of the lender. It must be determined by reference to a transparent, publicly auditable inflation index.
+
+(d) The inflation index used must be approved by Gideon Solutions, LLC through its governance process. An example of an acceptable index is the Truflation on-chain inflation index, but the license does not mandate any single provider. The governing criterion is that the index must be transparent, independently verifiable, and publicly auditable.
+
+(e) Any inflation adjustment mechanism that, in substance, functions as a guaranteed return on capital — regardless of its label — is prohibited.
+
+#### 4.11.4 Ethical Basis
+
+This prohibition is grounded in the historic Christian condemnation of usury: the extraction of guaranteed gain from the mere act of lending, without the lender sharing in the borrower's risk. This principle is attested across Scripture and the Christian theological tradition, from the Mosaic law's prohibition on interest between brethren, to the patristic condemnation of usury as a sin against charity, to the scholastic analysis of just price and just exchange.
+
+GCOSL adopts the position that risk-free extraction of wealth through lending is inherently exploitative, regardless of the rate charged. The permitted alternatives — profit-sharing, equity participation, revenue-sharing, and performance-based returns — reflect a model of finance in which capital providers share in the real outcomes of the ventures they fund. This is consistent with both historical Christian teaching and modern risk-sharing financial models.
+
+This prohibition does not require religious belief. It binds all users of the Software regardless of their convictions.
+
+---
+
+## 5. No Exceptions to Prohibited Uses
+
+The prohibitions in Section 4 are absolute. They apply:
+
+(a) In all jurisdictions, regardless of local law.
+
+(b) To all persons and entities, including governments, nonprofits, academic institutions, and individuals.
+
+(c) Regardless of whether the use is characterized as research, dual-use, defensive, educational, journalistic, or any other characterization.
+
+(d) Regardless of whether the use is legal in the jurisdiction where it occurs.
+
+(e) Without exception, waiver, or carve-out of any kind.
+
+No provision of this License shall be construed to permit any Prohibited Use under any circumstances.
+
+---
+
+## 6. Ethical Foundation
+
+This License is grounded in Christian ethical principles, including but not limited to:
+
+- The inherent dignity and worth of every human person, created in the image of God.
+- The moral obligation to conduct labor and commerce with honesty, fairness, and integrity.
+- The duty to restrain the accumulation and exercise of power over others.
+- The responsibility to refuse complicity in systems of exploitation, oppression, and destruction.
+- The historic Christian condemnation of usury and the conviction that lending must involve shared risk rather than guaranteed extraction from the borrower.
+
+These principles inform the purpose and structure of this License. However, this License does not require religious belief, religious affiliation, or religious practice as a condition of use. Any person or entity that complies with the terms of this License may exercise the rights granted herein, regardless of their religious convictions or lack thereof.
+
+---
+
+## 7. Distribution Requirements
+
+Any distribution of the Software or a Derivative Work must:
+
+(a) Include a complete, unmodified copy of this License.
+
+(b) Preserve all copyright notices, license notices, and attribution notices contained in the Software.
+
+(c) Clearly indicate any modifications made to the Software.
+
+(d) Not misrepresent the origin of the Software or claim authorship of unmodified portions.
+
+(e) Not use the name "Gideon," "Gideon Solutions," or "GCOSL" to endorse or promote Derivative Works without prior written permission from Gideon Solutions, LLC.
+
+---
+
+## 8. No Warranty
+
+THE SOFTWARE IS PROVIDED "AS IS," WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. THE LICENSOR MAKES NO WARRANTY THAT THE SOFTWARE WILL BE ERROR-FREE, UNINTERRUPTED, OR FREE OF HARMFUL COMPONENTS.
+
+---
+
+## 9. Limitation of Liability
+
+IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES, LOSS OF USE, DATA, OR PROFITS, OR BUSINESS INTERRUPTION) ARISING OUT OF OR IN CONNECTION WITH THE USE OR INABILITY TO USE THE SOFTWARE, EVEN IF THE LICENSOR HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+
+---
+
+## 10. Termination
+
+(a) Your rights under this License terminate immediately and automatically upon any violation of any term of this License.
+
+(b) Upon termination, You must cease all use, distribution, and possession of the Software and any Derivative Works.
+
+(c) Termination does not relieve You of liability for violations that occurred prior to termination.
+
+(d) The Licensor reserves the right to enforce this License through any available legal remedy, including injunctive relief and damages.
+
+---
+
+## 11. Severability
+
+If any provision of this License is held to be unenforceable or invalid by a court of competent jurisdiction, that provision shall be enforced to the maximum extent permissible, and the remaining provisions of this License shall remain in full force and effect.
+
+---
+
+## 12. Governing Law
+
+This License shall be governed by and construed in accordance with the laws of the State of North Carolina, United States of America, without regard to its conflict of laws provisions. Any legal action arising under this License shall be brought exclusively in the state or federal courts located in the State of North Carolina.
+
+---
+
+## 13. Irreversibility of Prohibitions
+
+The prohibited use categories enumerated in Section 4 may not be removed, narrowed, weakened, or made subject to exceptions in any future version of this License — including by the Licensor. Future versions of GCOSL may add new prohibited use categories or strengthen existing ones, but may never reduce the scope of any existing prohibition.
+
+This constraint binds Gideon Solutions, LLC and any successor, assignee, or acquirer of the rights to this License. Any purported version of GCOSL that removes or weakens a prohibition from a prior version is not a valid version of GCOSL and carries no licensing authority.
+
+---
+
+## 14. Derivative Licenses
+
+### 14.1 Permission to Create Derivative Licenses
+
+With the prior explicit written approval of Gideon Solutions, LLC, a person or entity may create a derivative license based on GCOSL (a "Derivative License") for use in their own software projects and business operations. No Derivative License may be created, published, or applied to any software without such approval.
+
+Approval must be granted in writing by an authorized representative of Gideon Solutions, LLC and must specifically identify the person or entity authorized, the scope of the Derivative License, and any conditions imposed. Oral agreements, implied permissions, and informal communications do not constitute approval under this Section.
+
+### 14.2 Mandatory Prohibition Floor
+
+Every Derivative License **must** retain all prohibited use categories enumerated in Section 4 of this License at their full scope and strength. A Derivative License may:
+
+(a) Add new prohibited use categories beyond those listed in Section 4.
+
+(b) Strengthen, broaden, or expand the scope of any existing prohibition.
+
+A Derivative License **may not**:
+
+(a) Remove, omit, narrow, weaken, or create exceptions to any prohibited use category defined in Section 4.
+
+(b) Introduce any provision that permits, authorizes, or carves out an exception for conduct that Section 4 prohibits.
+
+(c) Redefine terms in a manner that reduces the operative scope of any prohibition in Section 4.
+
+Any Derivative License that fails to satisfy this Section is not a valid Derivative License under GCOSL and carries no authority derived from this License.
+
+### 14.3 Permitted Modifications
+
+Subject to Sections 14.1 and 14.2, an approved Derivative License may:
+
+(a) Replace "Gideon Solutions, LLC" with the name of the derivative licensor's own organization in the commercial use reservation and governance provisions.
+
+(b) Modify the governing law and jurisdiction provisions in Section 12 to reflect the derivative licensor's own jurisdiction.
+
+(c) Add new terms, conditions, or restrictions not inconsistent with the terms of this License.
+
+(d) Choose its own name, provided it does not use the names "Gideon," "Gideon Solutions," or "GCOSL" without prior written permission from Gideon Solutions, LLC.
+
+### 14.4 Attribution Requirement
+
+Every Derivative License must include the following attribution notice in a prominent location within the license text:
+
+> This license is derived from the Gideon Christian Open Source License (GCOSL), originally created by Gideon Solutions, LLC. The original GCOSL is available at: https://github.com/gideonsolutions/gcosl
+
+### 14.5 No Endorsement
+
+The creation of a Derivative License does not imply endorsement, approval of the derivative licensor's products or services, affiliation, or partnership with Gideon Solutions, LLC. Gideon Solutions, LLC bears no responsibility for the terms, enforcement, or interpretation of any Derivative License beyond the mandatory requirements of this Section.
+
+### 14.6 Revocation
+
+Gideon Solutions, LLC reserves the right to revoke approval of a Derivative License if the derivative licensor violates the conditions of approval or publishes a Derivative License that fails to comply with Section 14.2. Revocation must be communicated in writing. Upon revocation, the derivative licensor must cease publishing or applying the Derivative License to new software, though existing software already distributed under a compliant Derivative License prior to revocation is not retroactively affected.
+
+---
+
+## 15. Entire Agreement
+
+This License constitutes the entire agreement between the Licensor and You with respect to the Software. No modification of this License shall be binding unless made in writing and signed by an authorized representative of Gideon Solutions, LLC.
+
+---
+
+**[Gideon Solutions, LLC](https://www.gideonsolutions.us/)**
+**All rights reserved.**
+
+**Contact:** [ian@gideonsolutions.us](mailto:ian@gideonsolutions.us)
+
+**Permaweb:** The canonical text of this license is permanently stored on the permaweb via [Arweave](https://arweave.org). Available on [ArDrive](https://app.ardrive.io/#/drives/b30912b8-faad-4481-8834-23ef07aefa6a?name=gcosl-1.0).
