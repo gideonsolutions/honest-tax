@@ -1,0 +1,187 @@
+[form]
+number = "Schedule A"
+title = "Itemized Deductions"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sca"
+
+# ── Medical and Dental Expenses ────────────────────────────────────
+
+[[fields]]
+line = "1"
+name = "medical_dental_expenses"
+label = "Medical and dental expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2"
+name = "agi"
+label = "Enter amount from Form 1040, line 11"
+type = "usd"
+
+[[fields]]
+line = "3"
+name = "agi_threshold"
+label = "Multiply line 2 by 7.5% (0.075)"
+type = "usd"
+
+[[fields]]
+line = "4"
+name = "medical_deduction"
+label = "Subtract line 3 from line 1. If line 3 is more than line 1, enter -0-"
+type = "usd"
+
+# ── Taxes You Paid ─────────────────────────────────────────────────
+
+[[fields]]
+line = "5a"
+name = "state_local_income_tax"
+label = "State and local income taxes or general sales taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5b"
+name = "state_local_real_estate_tax"
+label = "State and local real estate taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5c"
+name = "state_local_personal_property_tax"
+label = "State and local personal property taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5d"
+name = "total_salt_before_limit"
+label = "Add lines 5a through 5c"
+type = "usd"
+
+[[fields]]
+line = "5e"
+name = "salt_deduction"
+label = "Enter the smaller of line 5d or $10,000 ($5,000 if married filing separately)"
+type = "usd"
+
+[[fields]]
+line = "6"
+name = "other_taxes"
+label = "Other taxes. List type and amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "total_taxes"
+label = "Add lines 5e and 6"
+type = "usd"
+
+# ── Interest You Paid ──────────────────────────────────────────────
+
+[[fields]]
+line = "8a"
+name = "home_mortgage_interest_1098"
+label = "Home mortgage interest and points from Form 1098"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8b"
+name = "home_mortgage_interest_no_1098"
+label = "Home mortgage interest not reported on Form 1098"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8c"
+name = "points_not_on_1098"
+label = "Points not reported to you on Form 1098"
+type = "usd"
+required = false
+
+# Line 8d — Reserved for future use.
+
+[[fields]]
+line = "8e"
+name = "total_home_mortgage_interest"
+label = "Add lines 8a through 8c"
+type = "usd"
+
+[[fields]]
+line = "9"
+name = "investment_interest"
+label = "Investment interest. Attach Form 4952 if required"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "total_interest"
+label = "Add lines 8e and 9"
+type = "usd"
+
+# ── Gifts to Charity ──────────────────────────────────────────────
+
+[[fields]]
+line = "11"
+name = "gifts_cash"
+label = "Gifts by cash or check"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "gifts_other"
+label = "Other than by cash or check. Attach Form 8283 if required"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "gifts_carryover"
+label = "Carryover from prior year"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "total_gifts"
+label = "Add lines 11 through 13"
+type = "usd"
+
+# ── Casualty and Theft Losses ─────────────────────────────────────
+
+[[fields]]
+line = "15"
+name = "casualty_theft_losses"
+label = "Casualty and theft loss(es) from a federally declared disaster (other than net qualified disaster losses). Attach Form 4684"
+type = "usd"
+required = false
+
+# ── Other Itemized Deductions ─────────────────────────────────────
+
+[[fields]]
+line = "16"
+name = "other_itemized_deductions"
+label = "Other itemized deductions. List type and amount"
+type = "usd"
+required = false
+
+# ── Total Itemized Deductions ─────────────────────────────────────
+
+[[fields]]
+line = "17"
+name = "total_itemized_deductions"
+label = "Add lines 4, 7, 10, 14, 15, and 16"
+type = "usd"
+
+[[fields]]
+line = "18"
+name = "itemized_or_standard"
+label = "If you elect to itemize deductions even though they are less than your standard deduction, check here"
+type = "bool"
+required = false

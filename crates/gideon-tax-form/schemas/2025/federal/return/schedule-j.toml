@@ -1,0 +1,175 @@
+[form]
+number = "Schedule J"
+title = "Income Averaging for Farmers and Fishermen"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sj"
+
+# ── Part I — Taxable Income and Elected Farm Income ──────────────
+
+[[fields]]
+line = "1"
+name = "taxable_income"
+label = "Taxable income from Form 1040 or 1040-SR, line 15"
+type = "usd"
+
+[[fields]]
+line = "2a"
+name = "elected_farm_income"
+label = "Elected farm income. Enter the amount of your elected farm income (do not enter more than the amount on line 1; see instructions)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2b"
+name = "net_capital_gain_farming"
+label = "Enter the amount of your elected farm income included on line 2a that is net capital gain. If none, enter -0-"
+type = "usd"
+
+[[fields]]
+line = "2c"
+name = "unrecaptured_1250"
+label = "Enter the smaller of line 2b or the amount of unrecaptured section 1250 gain attributable to your farming or fishing business"
+type = "usd"
+
+# ── Part II — Figure Your Tax by Averaging ───────────────────────
+
+[[fields]]
+line = "3"
+name = "income_minus_elected"
+label = "Subtract line 2a from line 1"
+type = "usd"
+
+[[fields]]
+line = "4"
+name = "tax_on_line_3"
+label = "Figure the tax on the amount on line 3 using the 2025 tax rates. If line 3 includes any net capital gain, see instructions"
+type = "usd"
+
+# 2022 base year
+
+[[fields]]
+line = "5"
+name = "taxable_income_2022"
+label = "Taxable income from your 2022 Form 1040, 1040-SR, or 1040-NR, line 15"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "one_third_elected"
+label = "Divide line 2a by 3.0"
+type = "usd"
+
+[[fields]]
+line = "7"
+name = "total_line_5_6"
+label = "Add lines 5 and 6. If less than zero, enter as a negative amount"
+type = "usd"
+
+[[fields]]
+line = "8"
+name = "tax_line_7"
+label = "Figure the tax on the amount on line 7 using the 2022 tax rates"
+type = "usd"
+
+# 2023 base year
+
+[[fields]]
+line = "9"
+name = "taxable_income_2023"
+label = "Taxable income from your 2023 Form 1040, 1040-SR, or 1040-NR, line 15"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "line_6_again_2023"
+label = "Enter the amount from line 6"
+type = "usd"
+
+[[fields]]
+line = "11"
+name = "total_line_9_10"
+label = "Add lines 9 and 10. If less than zero, enter as a negative amount"
+type = "usd"
+
+[[fields]]
+line = "12"
+name = "tax_line_11"
+label = "Figure the tax on the amount on line 11 using the 2023 tax rates"
+type = "usd"
+
+# 2024 base year
+
+[[fields]]
+line = "13"
+name = "taxable_income_2024"
+label = "Taxable income from your 2024 Form 1040, 1040-SR, or 1040-NR, line 15"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "line_6_again_2024"
+label = "Enter the amount from line 6"
+type = "usd"
+
+[[fields]]
+line = "15"
+name = "total_line_13_14"
+label = "Add lines 13 and 14. If less than zero, enter as a negative amount"
+type = "usd"
+
+[[fields]]
+line = "16"
+name = "tax_line_15"
+label = "Figure the tax on the amount on line 15 using the 2024 tax rates"
+type = "usd"
+
+# Tax computation
+
+[[fields]]
+line = "17"
+name = "sum_taxes"
+label = "Add lines 4, 8, 12, and 16"
+type = "usd"
+
+[[fields]]
+line = "18"
+name = "amount_from_17"
+label = "Amount from line 17"
+type = "usd"
+
+[[fields]]
+line = "19"
+name = "tax_form_8814"
+label = "Tax from Form 8814 (relating to election to report child's interest and dividends)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "tax_form_4972"
+label = "Tax from Form 4972 (relating to lump-sum distributions)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21"
+name = "other_taxes"
+label = "Other taxes (including any repayment of excess advance premium tax credit from Form 8962)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "22"
+name = "total_additional_taxes"
+label = "Add lines 19 through 21"
+type = "usd"
+
+[[fields]]
+line = "23"
+name = "total_averaged_tax"
+label = "Your tax. Subtract line 22 from line 18. Enter here and on Form 1040 or 1040-SR, line 16"
+type = "usd"

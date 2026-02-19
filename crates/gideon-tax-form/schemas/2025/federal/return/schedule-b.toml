@@ -1,0 +1,85 @@
+[form]
+number = "Schedule B"
+title = "Interest and Ordinary Dividends"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040sb"
+
+# ── Part I — Interest ──────────────────────────────────────────────
+
+[[fields]]
+line = "1"
+name = "interest_payers"
+label = "Interest. List name of payer and amount"
+type = "list"
+required = false
+
+[fields.items]
+payer = "string"
+amount = "usd"
+
+[[fields]]
+line = "2"
+name = "total_interest_line_1"
+label = "Add the amounts on line 1"
+type = "usd"
+
+[[fields]]
+line = "3"
+name = "excludable_savings_bond_interest"
+label = "Excludable interest on series EE and I U.S. savings bonds issued after 1989. Attach Form 8815"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "total_interest"
+label = "Subtract line 3 from line 2. Enter here and on Form 1040 or 1040-SR, line 2b"
+type = "usd"
+
+# ── Part II — Ordinary Dividends ───────────────────────────────────
+
+[[fields]]
+line = "5"
+name = "dividend_payers"
+label = "Ordinary dividends. List name of payer and amount"
+type = "list"
+required = false
+
+[fields.items]
+payer = "string"
+amount = "usd"
+
+[[fields]]
+line = "6"
+name = "total_dividends"
+label = "Add the amounts on line 5. Enter here and on Form 1040 or 1040-SR, line 3b"
+type = "usd"
+
+# ── Part III — Foreign Accounts and Trusts ─────────────────────────
+
+[[fields]]
+line = "7a"
+name = "foreign_account"
+label = "At any time during 2025, did you have a financial interest in or a signature authority over a financial account (such as a bank account, securities account, or brokerage account) located in a foreign country? See instructions"
+type = "bool"
+
+[[fields]]
+line = "7a"
+name = "fincen_114_required"
+label = "If 'Yes,' are you required to file FinCEN Form 114, Report of Foreign Bank and Financial Accounts (FBAR), to report that financial interest or signature authority?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "7b"
+name = "foreign_countries"
+label = "If you are required to file FinCEN Form 114, enter the name of the foreign country where the financial account is located"
+type = "string"
+required = false
+
+[[fields]]
+line = "8"
+name = "foreign_trust"
+label = "During 2025, did you receive a distribution from, or were you the grantor of, or transferor to, a foreign trust? If 'Yes,' you may have to file Form 3520. See instructions"
+type = "bool"

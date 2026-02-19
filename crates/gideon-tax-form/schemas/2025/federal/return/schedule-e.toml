@@ -1,0 +1,450 @@
+[form]
+number = "Schedule E"
+title = "Supplemental Income and Loss"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040se"
+
+# ── Header ───────────────────────────────────────────────────────
+
+[[fields]]
+line = "A"
+name = "filed_1099"
+label = "Did you make any payments in 2025 that would require you to file Form(s) 1099?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "B"
+name = "filed_required_1099s"
+label = "If 'Yes,' did you or will you file required Form(s) 1099?"
+type = "bool"
+required = false
+
+# ── Part I — Income or Loss From Rental Real Estate and Royalties ──
+# Up to 3 properties (A, B, C); additional on separate Schedule E.
+
+[[fields]]
+line = "1a"
+name = "physical_address_a"
+label = "Physical address of each property — Property A"
+type = "string"
+required = false
+
+[[fields]]
+line = "1a"
+name = "physical_address_b"
+label = "Physical address of each property — Property B"
+type = "string"
+required = false
+
+[[fields]]
+line = "1a"
+name = "physical_address_c"
+label = "Physical address of each property — Property C"
+type = "string"
+required = false
+
+[[fields]]
+line = "1b"
+name = "property_type_a"
+label = "Type of property — Property A"
+type = "string"
+required = false
+# Values: 1=Single Family Residence, 2=Multi-Family Residence, 3=Vacation/Short-Term Rental,
+# 4=Commercial, 5=Land, 6=Royalties, 7=Self-Rental, 8=Other
+
+[[fields]]
+line = "1b"
+name = "property_type_b"
+label = "Type of property — Property B"
+type = "string"
+required = false
+
+[[fields]]
+line = "1b"
+name = "property_type_c"
+label = "Type of property — Property C"
+type = "string"
+required = false
+
+[[fields]]
+line = "2"
+name = "fair_rental_days"
+label = "Fair rental days for each property"
+type = "integer"
+required = false
+
+[[fields]]
+line = "2"
+name = "personal_use_days"
+label = "Personal use days for each property"
+type = "integer"
+required = false
+
+[[fields]]
+line = "2"
+name = "qjv"
+label = "Qualified joint venture election"
+type = "bool"
+required = false
+
+# Lines 3-4: Income (columns A, B, C)
+
+[[fields]]
+line = "3"
+name = "rents_received"
+label = "Rents received"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "royalties_received"
+label = "Royalties received"
+type = "usd"
+required = false
+
+# Lines 5-19: Expenses (columns A, B, C)
+
+[[fields]]
+line = "5"
+name = "advertising"
+label = "Advertising"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "auto_travel"
+label = "Auto and travel"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "cleaning_maintenance"
+label = "Cleaning and maintenance"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8"
+name = "commissions"
+label = "Commissions"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "insurance"
+label = "Insurance"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "legal_professional"
+label = "Legal and other professional fees"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "management_fees"
+label = "Management fees"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "mortgage_interest_paid"
+label = "Mortgage interest paid to banks, etc."
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "other_interest"
+label = "Other interest"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "repairs"
+label = "Repairs"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "supplies"
+label = "Supplies"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "taxes"
+label = "Taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "utilities"
+label = "Utilities"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "depreciation_depletion"
+label = "Depreciation expense or depletion"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "other_expenses"
+label = "Other"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "total_expenses"
+label = "Total expenses. Add lines 5 through 19"
+type = "usd"
+
+[[fields]]
+line = "21"
+name = "net_rental_income"
+label = "Subtract line 20 from line 3 (rents) or line 4 (royalties). If result is a (loss), see instructions to find out if you must file Form 6198"
+type = "usd"
+
+[[fields]]
+line = "22"
+name = "deductible_rental_loss"
+label = "Deductible rental real estate loss after limitation, if any, on Form 8582"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23a"
+name = "total_rents_received"
+label = "Total of all amounts in column 3 for all properties (total rents received)"
+type = "usd"
+
+[[fields]]
+line = "23b"
+name = "total_royalties_received"
+label = "Total of all amounts in column 4 for all properties (total royalties received)"
+type = "usd"
+
+[[fields]]
+line = "23c"
+name = "total_mortgage_interest"
+label = "Total of all amounts in column 12 for all properties (total mortgage interest)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23d"
+name = "total_depreciation"
+label = "Total of all amounts in column 18 for all properties (total depreciation)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "23e"
+name = "total_all_expenses"
+label = "Total of all amounts in column 20 for all properties (total expenses)"
+type = "usd"
+
+[[fields]]
+line = "24"
+name = "income_all_properties"
+label = "Income. Add positive amounts shown on line 21. Do not include any losses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "25"
+name = "losses_all_properties"
+label = "Losses. Add royalty losses from line 21 and rental real estate losses from line 22. Enter total losses here"
+type = "usd"
+required = false
+
+[[fields]]
+line = "26"
+name = "total_rental_royalty"
+label = "Total rental real estate and royalty income or (loss). Combine lines 24 and 25. Enter here, and on Schedule 1 (Form 1040), line 5"
+type = "usd"
+
+# ── Part II — Income or Loss From Partnerships and S Corporations ──
+
+[[fields]]
+line = "27"
+name = "prior_year_loss_reporting"
+label = "Are you reporting any loss not allowed in a prior year due to the at-risk, basis limitations, a prior year unallowed loss from a passive activity, or unreimbursed partnership expenses?"
+type = "bool"
+required = false
+
+[[fields]]
+line = "28"
+name = "partnership_entries"
+label = "Partnerships and S corporations. Enter name, type, and amounts"
+type = "list"
+required = false
+
+[fields.items]
+name_entity = "string"
+type_entity = "string"
+foreign = "bool"
+ein = "ein"
+basis_required = "bool"
+not_at_risk = "bool"
+passive_loss = "usd"
+passive_income = "usd"
+nonpassive_loss = "usd"
+section_179 = "usd"
+nonpassive_income = "usd"
+
+[[fields]]
+line = "29a"
+name = "total_partnership_income"
+label = "Totals — add columns (h) and (k) of line 28"
+type = "usd"
+required = false
+
+[[fields]]
+line = "29b"
+name = "total_partnership_loss"
+label = "Totals — add columns (g), (i), and (j) of line 28"
+type = "usd"
+required = false
+
+[[fields]]
+line = "30"
+name = "total_partnership_income_combined"
+label = "Add columns (h) and (k) of line 29a"
+type = "usd"
+required = false
+
+[[fields]]
+line = "31"
+name = "total_partnership_loss_combined"
+label = "Add columns (g), (i), and (j) of line 29b"
+type = "usd"
+required = false
+
+[[fields]]
+line = "32"
+name = "total_partnership"
+label = "Total partnership and S corporation income or (loss). Combine lines 30 and 31"
+type = "usd"
+
+# ── Part III — Income or Loss From Estates and Trusts ────────────
+
+[[fields]]
+line = "33"
+name = "estate_trust_entries"
+label = "Estates and trusts. Enter name, EIN, and amounts"
+type = "list"
+required = false
+
+[fields.items]
+name_entity = "string"
+ein = "ein"
+passive_loss = "usd"
+passive_income = "usd"
+nonpassive_loss = "usd"
+nonpassive_income = "usd"
+
+[[fields]]
+line = "34a"
+name = "total_estate_trust_income"
+label = "Totals — add columns (d) and (f) of line 33"
+type = "usd"
+required = false
+
+[[fields]]
+line = "34b"
+name = "total_estate_trust_loss"
+label = "Totals — add columns (c) and (e) of line 33"
+type = "usd"
+required = false
+
+[[fields]]
+line = "35"
+name = "total_estate_trust_income_combined"
+label = "Add columns (d) and (f) of line 34a"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36"
+name = "total_estate_trust_loss_combined"
+label = "Add columns (c) and (e) of line 34b"
+type = "usd"
+required = false
+
+[[fields]]
+line = "37"
+name = "total_estate_trust"
+label = "Total estate and trust income or (loss). Combine lines 35 and 36"
+type = "usd"
+
+# ── Part IV — Income or Loss From REMICs ─────────────────────────
+
+[[fields]]
+line = "38"
+name = "remic_entries"
+label = "Real estate mortgage investment conduits (REMICs)"
+type = "list"
+required = false
+
+[fields.items]
+name_entity = "string"
+ein = "ein"
+excess_inclusion = "usd"
+taxable_income = "usd"
+income = "usd"
+
+[[fields]]
+line = "39"
+name = "remic_total"
+label = "Combine columns (d) and (e) only. Enter the result here and include in the total on line 41"
+type = "usd"
+required = false
+
+# ── Part V — Summary ────────────────────────────────────────────
+
+[[fields]]
+line = "40"
+name = "net_farm_rental"
+label = "Net farm rental income or (loss) from Form 4835. Also, complete line 42 below"
+type = "usd"
+required = false
+
+[[fields]]
+line = "41"
+name = "total_supplemental"
+label = "Total income or (loss). Combine lines 26, 32, 37, 39, and 40. Enter the result here and on Schedule 1 (Form 1040), line 5"
+type = "usd"
+
+[[fields]]
+line = "42"
+name = "farming_fishing_reconciliation"
+label = "Reconciliation of farming and fishing income. Enter your gross farming and fishing income reported on Form 4835, line 7; Schedule K-1 (Form 1065), box 14, code B; Schedule K-1 (Form 1120-S), box 17, code AN; and Schedule K-1 (Form 1041), box 14, code F"
+type = "usd"
+required = false
+
+[[fields]]
+line = "43"
+name = "real_estate_professional_reconciliation"
+label = "Reconciliation for real estate professionals. Enter the net income or (loss) you reported anywhere on Form 1040 or 1040-SR from all rental real estate activities in which you materially participated"
+type = "usd"
+required = false
