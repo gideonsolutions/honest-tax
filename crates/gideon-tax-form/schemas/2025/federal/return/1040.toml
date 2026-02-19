@@ -1,0 +1,903 @@
+[form]
+number = "1040"
+title = "U.S. Individual Income Tax Return"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040gi"
+
+# ── Tax year ────────────────────────────────────────────────────────
+
+[[fields]]
+name = "fiscal_year_beginning"
+label = "Other tax year beginning"
+type = "date"
+required = false
+
+[[fields]]
+name = "fiscal_year_ending"
+label = "Other tax year ending"
+type = "date"
+required = false
+
+# ── Special condition checkboxes ────────────────────────────────────
+
+[[fields]]
+name = "filed_pursuant_to_301_9100_2"
+label = "Filed pursuant to sec. 301.9100-2"
+type = "bool"
+required = false
+
+[[fields]]
+name = "combat_zone"
+label = "Combat zone extension"
+type = "bool"
+required = false
+
+[[fields]]
+name = "deceased_taxpayer"
+label = "Taxpayer deceased"
+type = "bool"
+required = false
+
+[[fields]]
+name = "deceased_taxpayer_date"
+label = "Taxpayer date of death"
+type = "date"
+required = false
+
+[[fields]]
+name = "deceased_spouse"
+label = "Spouse deceased"
+type = "bool"
+required = false
+
+[[fields]]
+name = "deceased_spouse_date"
+label = "Spouse date of death"
+type = "date"
+required = false
+
+# ── Filing status ────────────────────────────────────────────────────
+
+[[fields]]
+name = "filing_status"
+label = "Filing status"
+type = "filing_status"
+
+[[fields]]
+name = "mfs_spouse_name"
+label = "If MFS, enter spouse's full name here"
+type = "string"
+required = false
+
+[[fields]]
+name = "hoh_qualifying_person_name"
+label = "If HOH, name of qualifying person"
+type = "string"
+required = false
+
+[[fields]]
+name = "qss_deceased_spouse_name"
+label = "If QSS, enter deceased spouse's name"
+type = "string"
+required = false
+
+# ── Identification ───────────────────────────────────────────────────
+
+[[fields]]
+name = "your_first_name"
+label = "Your first name and middle initial"
+type = "string"
+
+[[fields]]
+name = "your_last_name"
+label = "Your last name"
+type = "string"
+
+[[fields]]
+name = "your_ssn"
+label = "Your social security number"
+type = "ssn"
+
+[[fields]]
+name = "spouse_first_name"
+label = "If joint return, spouse's first name and middle initial"
+type = "string"
+required = false
+
+[[fields]]
+name = "spouse_last_name"
+label = "Spouse's last name"
+type = "string"
+required = false
+
+[[fields]]
+name = "spouse_ssn"
+label = "Spouse's social security number"
+type = "ssn"
+required = false
+
+[[fields]]
+name = "home_address"
+label = "Home address (number and street). If you have a P.O. box, see instructions."
+type = "string"
+
+[[fields]]
+name = "apt_no"
+label = "Apt. no."
+type = "string"
+required = false
+
+[[fields]]
+name = "city"
+label = "City, town, or post office"
+type = "string"
+
+[[fields]]
+name = "state"
+label = "State"
+type = "state"
+
+[[fields]]
+name = "zip"
+label = "ZIP code"
+type = "string"
+
+[[fields]]
+name = "foreign_country"
+label = "Foreign country name"
+type = "string"
+required = false
+
+[[fields]]
+name = "foreign_province"
+label = "Foreign province/state/county"
+type = "string"
+required = false
+
+[[fields]]
+name = "foreign_postal_code"
+label = "Foreign postal code"
+type = "string"
+required = false
+
+[[fields]]
+name = "main_home_in_us"
+label = "Check here if your main home (and your spouse's if filing jointly) was in the United States for more than half of 2025"
+type = "bool"
+required = false
+
+[[fields]]
+name = "mfs_or_hoh_lived_apart"
+label = "Check if your filing status is MFS or HOH and you lived apart from your spouse for the last 6 months of 2025"
+type = "bool"
+required = false
+
+# ── Presidential Election Campaign Fund ──────────────────────────────
+
+[[fields]]
+name = "presidential_campaign_you"
+label = "Check here if you, or your spouse if filing jointly, want $3 to go to this fund"
+type = "bool"
+
+[[fields]]
+name = "presidential_campaign_spouse"
+label = "Check here if your spouse wants $3 to go to this fund"
+type = "bool"
+required = false
+
+# ── Digital assets ───────────────────────────────────────────────────
+
+[[fields]]
+name = "digital_assets"
+label = "At any time during 2025, did you: (a) receive (as a reward, award, or payment for property or services); or (b) sell, exchange, gift, or otherwise dispose of a digital asset (or a financial interest in a digital asset)?"
+type = "bool"
+
+# ── Standard deduction checkboxes ────────────────────────────────────
+
+[[fields]]
+name = "you_as_dependent"
+label = "Someone can claim you as a dependent"
+type = "bool"
+required = false
+
+[[fields]]
+name = "spouse_as_dependent"
+label = "Someone can claim your spouse as a dependent"
+type = "bool"
+required = false
+
+[[fields]]
+name = "spouse_itemizes"
+label = "Spouse itemizes on a separate return or you were a dual-status alien"
+type = "bool"
+required = false
+
+[[fields]]
+name = "you_born_before_1961"
+label = "You were born before January 2, 1961"
+type = "bool"
+
+[[fields]]
+name = "you_blind"
+label = "You are blind"
+type = "bool"
+
+[[fields]]
+name = "spouse_born_before_1961"
+label = "Spouse was born before January 2, 1961"
+type = "bool"
+required = false
+
+[[fields]]
+name = "spouse_blind"
+label = "Spouse is blind"
+type = "bool"
+required = false
+
+# ── Dependents ───────────────────────────────────────────────────────
+
+[[fields]]
+name = "more_than_four_dependents"
+label = "If more than 4 dependents, check here and attach a statement"
+type = "bool"
+required = false
+
+[[fields]]
+name = "dependents"
+label = "Dependents"
+type = "list"
+
+[fields.items]
+first_name = "string"
+last_name = "string"
+ssn = "ssn"
+relationship = "string"
+lived_with_you = "bool"
+lived_with_you_in_us = "bool"
+full_time_student = "bool"
+permanently_totally_disabled = "bool"
+child_tax_credit = "bool"
+credit_for_other_dependents = "bool"
+
+# ── Income (lines 1–9) ──────────────────────────────────────────────
+
+[[fields]]
+line = "1a"
+name = "w2_wages"
+label = "Total amount from Form(s) W-2, box 1"
+type = "usd"
+
+[[fields]]
+line = "1b"
+name = "household_employee_wages"
+label = "Household employee wages not reported on Form(s) W-2"
+type = "usd"
+
+[[fields]]
+line = "1c"
+name = "tip_income"
+label = "Tip income not reported on line 1a"
+type = "usd"
+
+[[fields]]
+line = "1d"
+name = "medicaid_waiver_payments"
+label = "Medicaid waiver payments not reported on Form(s) W-2, box 1"
+type = "usd"
+
+[[fields]]
+line = "1e"
+name = "taxable_dependent_care_benefits"
+label = "Taxable dependent care benefits from Form 2441, line 26"
+type = "usd"
+
+[[fields]]
+line = "1f"
+name = "adoption_benefits"
+label = "Employer-provided adoption benefits from Form 8839, line 31"
+type = "usd"
+
+[[fields]]
+line = "1g"
+name = "form_8919_wages"
+label = "Wages from Form 8919, line 6"
+type = "usd"
+
+[[fields]]
+line = "1h"
+name = "other_earned_income"
+label = "Other earned income"
+type = "usd"
+
+[[fields]]
+line = "1i"
+name = "nontaxable_combat_pay"
+label = "Nontaxable combat pay election"
+type = "usd"
+
+[[fields]]
+line = "1z"
+name = "total_wages"
+label = "Add lines 1a through 1h"
+type = "usd"
+
+[[fields]]
+line = "2a"
+name = "tax_exempt_interest"
+label = "Tax-exempt interest"
+type = "usd"
+
+[[fields]]
+line = "2b"
+name = "taxable_interest"
+label = "Taxable interest"
+type = "usd"
+
+[[fields]]
+line = "3a"
+name = "qualified_dividends"
+label = "Qualified dividends"
+type = "usd"
+
+[[fields]]
+line = "3b"
+name = "ordinary_dividends"
+label = "Ordinary dividends"
+type = "usd"
+
+[[fields]]
+line = "3c"
+name = "child_dividends_included"
+label = "Check if your child's qualified/ordinary dividends are included on lines 3a and 3b (Form 8814)"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4a"
+name = "ira_distributions"
+label = "IRA distributions"
+type = "usd"
+
+[[fields]]
+line = "4b"
+name = "ira_taxable_amount"
+label = "Taxable amount"
+type = "usd"
+
+[[fields]]
+line = "4c"
+name = "ira_rollover"
+label = "Rollover"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4c"
+name = "ira_qcd"
+label = "QCD"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4c"
+name = "ira_other"
+label = "Other"
+type = "bool"
+required = false
+
+[[fields]]
+line = "5a"
+name = "pensions_annuities"
+label = "Pensions and annuities"
+type = "usd"
+
+[[fields]]
+line = "5b"
+name = "pensions_taxable_amount"
+label = "Taxable amount"
+type = "usd"
+
+[[fields]]
+line = "5c"
+name = "pension_rollover"
+label = "Rollover"
+type = "bool"
+required = false
+
+[[fields]]
+line = "5c"
+name = "pension_pso"
+label = "PSO"
+type = "bool"
+required = false
+
+[[fields]]
+line = "5c"
+name = "pension_other"
+label = "Other"
+type = "bool"
+required = false
+
+[[fields]]
+line = "6a"
+name = "social_security_benefits"
+label = "Social security benefits"
+type = "usd"
+
+[[fields]]
+line = "6b"
+name = "social_security_taxable"
+label = "Taxable amount"
+type = "usd"
+
+[[fields]]
+line = "6c"
+name = "ss_lump_sum_election"
+label = "Lump-sum election"
+type = "bool"
+required = false
+
+[[fields]]
+line = "6d"
+name = "ss_mfs_lived_apart"
+label = "If MFS and you lived apart from your spouse for the entire year, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "7"
+name = "capital_gain_or_loss"
+label = "Capital gain or (loss)"
+type = "usd"
+
+[[fields]]
+line = "7b"
+name = "schedule_d_not_required"
+label = "Check if Schedule D is not required"
+type = "bool"
+required = false
+
+[[fields]]
+line = "8"
+name = "other_income"
+label = "Other income from Schedule 1, line 10"
+type = "usd"
+
+[[fields]]
+line = "9"
+name = "total_income"
+label = "Total income. Add lines 1z, 2b, 3b, 4b, 5b, 6b, 7, and 8"
+type = "usd"
+
+# ── Adjusted gross income (lines 10–11) ──────────────────────────────
+
+[[fields]]
+line = "10"
+name = "adjustments_to_income"
+label = "Adjustments to income from Schedule 1, line 26"
+type = "usd"
+
+[[fields]]
+line = "11"
+name = "adjusted_gross_income"
+label = "Adjusted gross income. Subtract line 10 from line 9"
+type = "usd"
+
+# ── Deductions (lines 12–15) ────────────────────────────────────────
+
+[[fields]]
+line = "12"
+name = "standard_or_itemized_deductions"
+label = "Standard deduction or itemized deductions (from Schedule A)"
+type = "usd"
+
+[[fields]]
+line = "13a"
+name = "qualified_business_income_deduction"
+label = "Qualified business income deduction from Form 8995 or 8995-A"
+type = "usd"
+
+[[fields]]
+line = "13b"
+name = "additional_deductions"
+label = "Additional deductions from Schedule 1-A, line 38"
+type = "usd"
+
+[[fields]]
+line = "14"
+name = "total_deductions"
+label = "Add lines 12, 13a, and 13b"
+type = "usd"
+
+[[fields]]
+line = "15"
+name = "taxable_income"
+label = "Taxable income. Subtract line 14 from line 11. If zero or less, enter 0"
+type = "usd"
+
+# ── Tax (lines 16–18) ───────────────────────────────────────────────
+
+[[fields]]
+line = "16"
+name = "tax"
+label = "Tax"
+type = "usd"
+
+[[fields]]
+line = "16"
+name = "tax_form_8814"
+label = "Check if tax includes amount from Form 8814"
+type = "bool"
+required = false
+
+[[fields]]
+line = "16"
+name = "tax_form_4972"
+label = "Check if tax includes amount from Form 4972"
+type = "bool"
+required = false
+
+[[fields]]
+line = "16"
+name = "tax_other"
+label = "Check if tax includes other amount"
+type = "bool"
+required = false
+
+[[fields]]
+line = "16"
+name = "tax_other_code"
+label = "Other tax code"
+type = "string"
+required = false
+
+[[fields]]
+line = "16"
+name = "tax_other_amount"
+label = "Other tax amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "amount_from_schedule_2"
+label = "Amount from Schedule 2, Part I, line 3"
+type = "usd"
+
+[[fields]]
+line = "18"
+name = "total_tax_before_credits"
+label = "Add lines 16 and 17"
+type = "usd"
+
+# ── Credits (lines 19–21) ───────────────────────────────────────────
+
+[[fields]]
+line = "19"
+name = "child_tax_credit"
+label = "Child tax credit or credit for other dependents from Schedule 8812"
+type = "usd"
+
+[[fields]]
+line = "20"
+name = "schedule_3_credits"
+label = "Amount from Schedule 3, line 8"
+type = "usd"
+
+[[fields]]
+line = "21"
+name = "total_credits"
+label = "Add lines 19 and 20"
+type = "usd"
+
+[[fields]]
+line = "22"
+name = "tax_minus_credits"
+label = "Subtract line 21 from line 18. If zero or less, enter 0"
+type = "usd"
+
+# ── Other taxes (lines 23–24) ───────────────────────────────────────
+
+[[fields]]
+line = "23"
+name = "other_taxes"
+label = "Other taxes, including self-employment tax, from Schedule 2, Part II, line 21"
+type = "usd"
+
+[[fields]]
+line = "24"
+name = "total_tax"
+label = "Total tax. Add lines 22 and 23"
+type = "usd"
+
+# ── Payments (lines 25–33) ──────────────────────────────────────────
+
+[[fields]]
+line = "25a"
+name = "w2_withholding"
+label = "Federal income tax withheld from Form(s) W-2"
+type = "usd"
+
+[[fields]]
+line = "25b"
+name = "1099_withholding"
+label = "Federal income tax withheld from Form(s) 1099"
+type = "usd"
+
+[[fields]]
+line = "25c"
+name = "other_withholding"
+label = "Other forms"
+type = "usd"
+
+[[fields]]
+line = "25d"
+name = "total_withholding"
+label = "Total. Add lines 25a through 25c"
+type = "usd"
+
+[[fields]]
+line = "26"
+name = "estimated_tax_payments"
+label = "2025 estimated tax payments and amount applied from prior year return"
+type = "usd"
+
+[[fields]]
+line = "26"
+name = "former_spouse_ssn"
+label = "If you made estimated tax payments with your former spouse in 2025, enter their SSN"
+type = "ssn"
+required = false
+
+[[fields]]
+line = "27a"
+name = "earned_income_credit"
+label = "Earned income credit (EIC)"
+type = "usd"
+
+[[fields]]
+line = "27b"
+name = "nontaxable_combat_pay_eic"
+label = "Nontaxable combat pay election"
+type = "bool"
+
+[[fields]]
+line = "27c"
+name = "prior_year_earned_income_eic"
+label = "Prior year (2024) earned income"
+type = "bool"
+
+[[fields]]
+line = "28"
+name = "additional_child_tax_credit"
+label = "Additional child tax credit from Schedule 8812"
+type = "usd"
+
+[[fields]]
+line = "29"
+name = "american_opportunity_credit"
+label = "American opportunity credit from Form 8863, line 8"
+type = "usd"
+
+[[fields]]
+line = "30"
+name = "refundable_adoption_credit"
+label = "Amount from Form 8839, line 13"
+type = "usd"
+
+[[fields]]
+line = "31"
+name = "schedule_3_other_payments"
+label = "Amount from Schedule 3, line 15"
+type = "usd"
+
+[[fields]]
+line = "32"
+name = "total_other_payments"
+label = "Total other payments and refundable credits. Add lines 27a, 28, 29, 30, and 31"
+type = "usd"
+
+[[fields]]
+line = "33"
+name = "total_payments"
+label = "Total payments. Add lines 25d, 26, and 32"
+type = "usd"
+
+# ── Refund (lines 34–36) ────────────────────────────────────────────
+
+[[fields]]
+line = "34"
+name = "overpaid"
+label = "If line 33 is more than line 24, subtract line 24 from line 33. This is the amount you overpaid"
+type = "usd"
+
+[[fields]]
+line = "35a"
+name = "refunded_to_you"
+label = "Amount of line 34 you want refunded to you"
+type = "usd"
+
+[[fields]]
+line = "35a"
+name = "form_8888"
+label = "Check if Form 8888 is attached"
+type = "bool"
+
+[[fields]]
+line = "35b"
+name = "routing_number"
+label = "Routing number"
+type = "string"
+required = false
+
+[[fields]]
+line = "35c"
+name = "account_type"
+label = "Account type"
+type = "account_type"
+required = false
+
+[[fields]]
+line = "35d"
+name = "account_number"
+label = "Account number"
+type = "string"
+required = false
+
+# ── Amount you owe (lines 37–38) ────────────────────────────────────
+
+[[fields]]
+line = "36"
+name = "applied_to_estimated_tax"
+label = "Amount of line 34 you want applied to your 2026 estimated tax"
+type = "usd"
+
+[[fields]]
+line = "37"
+name = "amount_you_owe"
+label = "Amount you owe. Subtract line 33 from line 24"
+type = "usd"
+
+[[fields]]
+line = "38"
+name = "estimated_tax_penalty"
+label = "Estimated tax penalty"
+type = "usd"
+
+# ── Third party designee ────────────────────────────────────────────
+
+[[fields]]
+name = "designee_allowed"
+label = "Do you want to allow another person to discuss this return with the IRS?"
+type = "bool"
+required = false
+
+[[fields]]
+name = "designee_name"
+label = "Designee's name"
+type = "string"
+required = false
+
+[[fields]]
+name = "designee_phone"
+label = "Phone no."
+type = "string"
+required = false
+
+[[fields]]
+name = "designee_pin"
+label = "Personal identification number (PIN)"
+type = "string"
+required = false
+
+# ── Sign here ───────────────────────────────────────────────────────
+
+[[fields]]
+name = "your_signature_date"
+label = "Date"
+type = "date"
+
+[[fields]]
+name = "spouse_signature_date"
+label = "Spouse's signature date"
+type = "date"
+required = false
+
+[[fields]]
+name = "your_occupation"
+label = "Your occupation"
+type = "string"
+
+[[fields]]
+name = "spouse_occupation"
+label = "Spouse's occupation"
+type = "string"
+required = false
+
+[[fields]]
+name = "your_identity_protection_pin"
+label = "Identity Protection PIN"
+type = "string"
+required = false
+
+[[fields]]
+name = "spouse_identity_protection_pin"
+label = "Spouse's Identity Protection PIN"
+type = "string"
+required = false
+
+[[fields]]
+name = "phone_number"
+label = "Daytime phone number"
+type = "string"
+required = false
+
+[[fields]]
+name = "email_address"
+label = "Email address"
+type = "string"
+required = false
+
+# ── Paid preparer use only ──────────────────────────────────────────
+
+[[fields]]
+name = "preparer_name"
+label = "Preparer's name"
+type = "string"
+required = false
+
+[[fields]]
+name = "preparer_date"
+label = "Preparer's date"
+type = "date"
+required = false
+
+[[fields]]
+name = "preparer_self_employed"
+label = "Check if self-employed"
+type = "bool"
+required = false
+
+[[fields]]
+name = "preparer_ptin"
+label = "PTIN"
+type = "ptin"
+required = false
+
+[[fields]]
+name = "firm_name"
+label = "Firm's name"
+type = "string"
+required = false
+
+[[fields]]
+name = "firm_ein"
+label = "Firm's EIN"
+type = "ein"
+required = false
+
+[[fields]]
+name = "firm_address"
+label = "Firm's address"
+type = "string"
+required = false
+
+[[fields]]
+name = "firm_phone"
+label = "Phone no."
+type = "string"
+required = false
+
+# ── Enum values ─────────────────────────────────────────────────────
+
+[enums.filing_status]
+single = "Single"
+married_filing_jointly = "Married filing jointly"
+married_filing_separately = "Married filing separately"
+head_of_household = "Head of household"
+qualifying_surviving_spouse = "Qualifying surviving spouse (QSS)"
+
+[enums.account_type]
+checking = "Checking"
+savings = "Savings"
