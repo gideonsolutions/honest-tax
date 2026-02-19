@@ -1,0 +1,516 @@
+[form]
+number = "Schedule 1"
+title = "Additional Income and Adjustments to Income"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040gi"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "header"
+name = "name"
+label = "Name(s) shown on Form 1040, 1040-SR, or 1040-NR"
+type = "string"
+
+[[fields]]
+line = "header"
+name = "ssn"
+label = "Your social security number"
+type = "ssn"
+
+[[fields]]
+line = "header"
+name = "erroneous_1099k_amount"
+label = "For 2025, enter the amount reported to you on Form(s) 1099-K that was included in error or for personal items sold at a loss"
+type = "usd"
+required = false
+
+# ── Part I — Additional Income ─────────────────────────────────────
+
+[[fields]]
+line = "1"
+name = "taxable_refunds"
+label = "Taxable refunds, credits, or offsets of state and local income taxes"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2a"
+name = "alimony_received"
+label = "Alimony received"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2b"
+name = "alimony_received_date"
+label = "Date of original divorce or separation agreement"
+type = "date"
+required = false
+
+[[fields]]
+line = "3"
+name = "business_income"
+label = "Business income or (loss). Attach Schedule C"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "other_gains"
+label = "Other gains or (losses)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "other_gains_from_4797"
+label = "Check if any from Form 4797"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4"
+name = "other_gains_from_4684"
+label = "Check if any from Form 4684"
+type = "bool"
+required = false
+
+[[fields]]
+line = "5"
+name = "rental_real_estate"
+label = "Rental real estate, royalties, partnerships, S corporations, trusts, etc. Attach Schedule E"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "farm_income"
+label = "Farm income or (loss). Attach Schedule F"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "unemployment_compensation"
+label = "Unemployment compensation"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "unemployment_repaid"
+label = "If you repaid a 2025 overpayment, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "7"
+name = "unemployment_repaid_amount"
+label = "Amount repaid"
+type = "usd"
+required = false
+
+# ── Lines 8a–8z — Other income ─────────────────────────────────────
+
+[[fields]]
+line = "8a"
+name = "nol_deduction"
+label = "Net operating loss deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8b"
+name = "gambling_income"
+label = "Gambling income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8c"
+name = "cancellation_of_debt"
+label = "Cancellation of debt"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8d"
+name = "foreign_earned_income_exclusion"
+label = "Foreign earned income exclusion from Form 2555"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8e"
+name = "income_form_8853"
+label = "Income from Form 8853"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8f"
+name = "income_form_8889"
+label = "Income from Form 8889"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8g"
+name = "alaska_permanent_fund"
+label = "Alaska Permanent Fund dividends"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8h"
+name = "jury_duty_pay_income"
+label = "Jury duty pay"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8i"
+name = "prizes_and_awards"
+label = "Prizes and awards"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8j"
+name = "activity_not_for_profit"
+label = "Activity not engaged in for profit income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8k"
+name = "stock_options"
+label = "Stock options"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8l"
+name = "rental_personal_property"
+label = "Income from the rental of personal property"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8m"
+name = "olympic_medals"
+label = "Olympic and Paralympic medals and USOC prize money"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8n"
+name = "section_951a_inclusion"
+label = "Section 951(a) inclusion"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8o"
+name = "section_951a_a_inclusion"
+label = "Section 951A(a) inclusion"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8p"
+name = "excess_business_loss_adj"
+label = "Section 461(l) excess business loss adjustment"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8q"
+name = "able_distributions"
+label = "Taxable distributions from an ABLE account"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8r"
+name = "scholarship_grants"
+label = "Scholarship and fellowship grants not reported on Form W-2"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8s"
+name = "medicaid_waiver"
+label = "Nontaxable amount of Medicaid waiver payments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8t"
+name = "nonqualified_deferred_comp"
+label = "Pension or annuity from a nonqualified deferred compensation plan"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8u"
+name = "wages_while_incarcerated"
+label = "Wages earned while incarcerated"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8v"
+name = "digital_assets"
+label = "Digital assets not reported elsewhere"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8z"
+name = "other_income_type"
+label = "Other income. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "8z"
+name = "other_income"
+label = "Other income amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "total_other_income"
+label = "Total other income. Add lines 8a through 8z"
+type = "usd"
+
+[[fields]]
+line = "10"
+name = "total_additional_income"
+label = "Combine lines 1 through 7 and 9. Enter here and on Form 1040, line 8"
+type = "usd"
+
+# ── Part II — Adjustments to Income ────────────────────────────────
+
+[[fields]]
+line = "11"
+name = "educator_expenses"
+label = "Educator expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "business_expenses_reservists"
+label = "Certain business expenses of reservists, performing artists, and fee-basis government officials"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "hsa_deduction"
+label = "Health savings account deduction. Attach Form 8889"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "moving_expenses"
+label = "Moving expenses for members of the Armed Forces. Attach Form 3903"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "moving_expenses_storage_only"
+label = "If claiming only storage fees, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "15"
+name = "se_tax_deduction"
+label = "Deductible part of self-employment tax. Attach Schedule SE"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "se_retirement_plans"
+label = "Self-employed SEP, SIMPLE, and qualified plans"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "se_health_insurance"
+label = "Self-employed health insurance deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "early_withdrawal_penalty"
+label = "Penalty on early withdrawal of savings"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19a"
+name = "alimony_paid"
+label = "Alimony paid"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19b"
+name = "alimony_recipient_ssn"
+label = "Recipient's SSN"
+type = "ssn"
+required = false
+
+[[fields]]
+line = "19c"
+name = "alimony_paid_date"
+label = "Date of original divorce or separation agreement"
+type = "date"
+required = false
+
+[[fields]]
+line = "20"
+name = "ira_deduction"
+label = "IRA deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "ira_mfs_lived_apart"
+label = "If you are married filing separately and lived apart from your spouse for the entire year, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "21"
+name = "student_loan_interest"
+label = "Student loan interest deduction"
+type = "usd"
+required = false
+
+# Line 22 — Reserved for future use.
+
+[[fields]]
+line = "23"
+name = "archer_msa_deduction"
+label = "Archer MSA deduction"
+type = "usd"
+required = false
+
+# ── Lines 24a–24z — Other adjustments ──────────────────────────────
+
+[[fields]]
+line = "24a"
+name = "jury_duty_pay_adj"
+label = "Jury duty pay"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24b"
+name = "rental_personal_property_adj"
+label = "Deductible expenses related to income from the rental of personal property"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24c"
+name = "olympic_medals_adj"
+label = "Nontaxable amount of Olympic and Paralympic medals and USOC prize money"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24d"
+name = "reforestation"
+label = "Reforestation amortization and expenses"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24e"
+name = "supplemental_unemployment"
+label = "Repayment of supplemental unemployment compensation benefits under the Trade Act of 1974"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24f"
+name = "contributions_501c18d"
+label = "Contributions to section 501(c)(18)(D) pension plans"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24g"
+name = "chaplain_contributions"
+label = "Contributions by certain chaplains to section 403(b) plans"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24h"
+name = "attorney_fees_discrimination"
+label = "Attorney fees and court costs for actions involving certain unlawful discrimination claims"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24i"
+name = "attorney_fees_whistleblower"
+label = "Attorney fees and court costs you paid in connection with an award from the IRS for information you provided"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24j"
+name = "housing_deduction_2555"
+label = "Housing deduction from Form 2555"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24k"
+name = "excess_deductions_67e"
+label = "Excess deductions of section 67(e) expenses from Schedule K-1"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24z"
+name = "other_adjustments_type"
+label = "Other adjustments. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "24z"
+name = "other_adjustments"
+label = "Other adjustments amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "25"
+name = "total_other_adjustments"
+label = "Total other adjustments. Add lines 24a through 24z"
+type = "usd"
+
+[[fields]]
+line = "26"
+name = "total_adjustments"
+label = "Add lines 11 through 23 and 25. These are your adjustments to income. Enter here and on Form 1040, line 10"
+type = "usd"

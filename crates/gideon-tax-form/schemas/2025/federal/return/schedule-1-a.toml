@@ -1,0 +1,362 @@
+[form]
+number = "Schedule 1-A"
+title = "Additional Deductions"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040gi"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "header"
+name = "name"
+label = "Name(s) shown on Form 1040, 1040-SR, or 1040-NR"
+type = "string"
+
+[[fields]]
+line = "header"
+name = "ssn"
+label = "Your social security number"
+type = "ssn"
+
+# ── Part I — Modified Adjusted Gross Income (MAGI) Amount ──────────
+
+[[fields]]
+line = "1"
+name = "agi"
+label = "Amount from Form 1040, 1040-SR, or 1040-NR, line 11b"
+type = "usd"
+
+[[fields]]
+line = "2a"
+name = "excluded_puerto_rico_income"
+label = "Excluded Puerto Rico income"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2b"
+name = "foreign_earned_income_exclusion"
+label = "Foreign earned income exclusion"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2c"
+name = "foreign_housing_deduction"
+label = "Foreign housing deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2d"
+name = "exclusion_american_samoa"
+label = "Exclusion of income for bona fide residents of American Samoa"
+type = "usd"
+required = false
+
+[[fields]]
+line = "2e"
+name = "total_excluded_income"
+label = "Add lines 2a, 2b, 2c, and 2d"
+type = "usd"
+
+[[fields]]
+line = "3"
+name = "magi"
+label = "Add lines 1 and 2e. This is your modified adjusted gross income"
+type = "usd"
+
+# ── Part II — No Tax on Tips ───────────────────────────────────────
+
+[[fields]]
+line = "4a"
+name = "qualified_tips_w2"
+label = "Qualified tips included on Form W-2, box 7"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4b"
+name = "qualified_tips_4137"
+label = "Qualified tips included on Form 4137, line 1"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4c"
+name = "qualified_tips_employee"
+label = "Larger of line 4a or line 4b"
+type = "usd"
+required = false
+
+[[fields]]
+line = "5"
+name = "qualified_tips_business"
+label = "Qualified tips received in the course of a trade or business"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "total_qualified_tips"
+label = "Add lines 4c and 5"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "tips_deduction_limit"
+label = "Enter the smaller of line 6 or $25,000 ($50,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8"
+name = "tips_magi"
+label = "Enter the amount from line 3"
+type = "usd"
+required = false
+
+[[fields]]
+line = "9"
+name = "tips_threshold"
+label = "Enter $150,000 ($300,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "10"
+name = "tips_excess_magi"
+label = "Subtract line 9 from line 8. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+[[fields]]
+line = "11"
+name = "tips_phaseout_factor"
+label = "Divide line 10 by $1,000. Decrease any fraction to the next lower whole number"
+type = "integer"
+required = false
+
+[[fields]]
+line = "12"
+name = "tips_reduction"
+label = "Multiply line 11 by $100"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "qualified_tips_deduction"
+label = "Qualified tips deduction. Subtract line 12 from line 7. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+# ── Part III — No Tax on Overtime ──────────────────────────────────
+
+[[fields]]
+line = "14a"
+name = "overtime_w2"
+label = "Qualified overtime compensation from Form W-2, box 1"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14b"
+name = "overtime_1099"
+label = "Qualified overtime compensation from Form 1099-NEC or 1099-MISC"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14c"
+name = "total_overtime"
+label = "Add lines 14a and 14b"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "overtime_deduction_limit"
+label = "Enter the smaller of line 14c or $12,500 ($25,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "overtime_magi"
+label = "Enter the amount from line 3"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17"
+name = "overtime_threshold"
+label = "Enter $150,000 ($300,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "overtime_excess_magi"
+label = "Subtract line 17 from line 16. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+[[fields]]
+line = "19"
+name = "overtime_phaseout_factor"
+label = "Divide line 18 by $1,000. Decrease any fraction to the next lower whole number"
+type = "integer"
+required = false
+
+[[fields]]
+line = "20"
+name = "overtime_reduction"
+label = "Multiply line 19 by $100"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21"
+name = "qualified_overtime_deduction"
+label = "Qualified overtime compensation deduction. Subtract line 20 from line 15. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+# ── Part IV — No Tax on Car Loan Interest ──────────────────────────
+
+[[fields]]
+line = "22"
+name = "vehicle_loan_interest"
+label = "Applicable passenger vehicle. If more than two VINs, see instructions"
+type = "list"
+required = false
+
+[fields.items]
+vin = "string"
+interest_deducted_schedule_cef = "usd"
+interest_schedule_1a = "usd"
+
+[[fields]]
+line = "23"
+name = "total_vehicle_interest"
+label = "Add line 22, column (iii) amounts"
+type = "usd"
+required = false
+
+[[fields]]
+line = "24"
+name = "car_loan_deduction_limit"
+label = "Enter the smaller of line 23 or $10,000"
+type = "usd"
+required = false
+
+[[fields]]
+line = "25"
+name = "car_loan_magi"
+label = "Enter the amount from line 3"
+type = "usd"
+required = false
+
+[[fields]]
+line = "26"
+name = "car_loan_threshold"
+label = "Enter $100,000 ($200,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "27"
+name = "car_loan_excess_magi"
+label = "Subtract line 26 from line 25. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+[[fields]]
+line = "28"
+name = "car_loan_phaseout_factor"
+label = "Divide line 27 by $1,000. If the result is not a whole number, increase to the next higher whole number"
+type = "integer"
+required = false
+
+[[fields]]
+line = "29"
+name = "car_loan_reduction"
+label = "Multiply line 28 by $200"
+type = "usd"
+required = false
+
+[[fields]]
+line = "30"
+name = "qualified_car_loan_deduction"
+label = "Qualified passenger vehicle loan interest deduction. Subtract line 29 from line 24. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+# ── Part V — Enhanced Deduction for Seniors ────────────────────────
+
+[[fields]]
+line = "31"
+name = "senior_magi"
+label = "Enter the amount from line 3"
+type = "usd"
+required = false
+
+[[fields]]
+line = "32"
+name = "senior_threshold"
+label = "Enter $75,000 ($150,000 if married filing jointly)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "33"
+name = "senior_excess_magi"
+label = "Subtract line 32 from line 31. If zero or less, enter $6,000 on line 35"
+type = "usd"
+required = false
+
+[[fields]]
+line = "34"
+name = "senior_reduction"
+label = "Multiply line 33 by 6% (0.06)"
+type = "usd"
+required = false
+
+[[fields]]
+line = "35"
+name = "senior_base_deduction"
+label = "Subtract line 34 from $6,000. If zero or less, enter -0-"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36a"
+name = "senior_deduction_taxpayer"
+label = "Enhanced deduction for taxpayer"
+type = "usd"
+required = false
+
+[[fields]]
+line = "36b"
+name = "senior_deduction_spouse"
+label = "Enhanced deduction for spouse"
+type = "usd"
+required = false
+
+[[fields]]
+line = "37"
+name = "total_senior_deduction"
+label = "Enhanced deduction for seniors"
+type = "usd"
+required = false
+
+# ── Part VI — Total Additional Deductions ──────────────────────────
+
+[[fields]]
+line = "38"
+name = "total_additional_deductions"
+label = "Add lines 13, 21, 30, and 37. Enter here and on Form 1040, line 13b"
+type = "usd"

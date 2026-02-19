@@ -1,0 +1,443 @@
+[form]
+number = "Schedule 2"
+title = "Additional Taxes"
+year = 2025
+category = "return"
+url = "https://www.irs.gov/instructions/i1040gi"
+
+# ── Header ─────────────────────────────────────────────────────────
+
+[[fields]]
+line = "header"
+name = "name"
+label = "Name(s) shown on Form 1040, 1040-SR, or 1040-NR"
+type = "string"
+
+[[fields]]
+line = "header"
+name = "ssn"
+label = "Your social security number"
+type = "ssn"
+
+# ── Part I — Tax ───────────────────────────────────────────────────
+
+[[fields]]
+line = "1a"
+name = "excess_ptc_repayment"
+label = "Excess advance premium tax credit repayment. Attach Form 8962"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1b"
+name = "new_clean_vehicle_repayment"
+label = "Repayment of new clean vehicle credit(s) from Schedule A (Form 8936), Part II"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1c"
+name = "prev_clean_vehicle_repayment"
+label = "Repayment of previously owned clean vehicle credit(s) from Schedule A (Form 8936), Part IV"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1d"
+name = "recapture_net_epe"
+label = "Recapture of net EPE"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1e"
+name = "excessive_payments_epe"
+label = "Excessive payments (EPs) on gross EPE from Form 4255"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1e(i)"
+name = "epe_checkbox_1a"
+label = "Check if applicable: Line 1a"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1e(ii)"
+name = "epe_checkbox_1c"
+label = "Check if applicable: Line 1c"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1e(iii)"
+name = "epe_checkbox_1d"
+label = "Check if applicable: Line 1d"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1e(iv)"
+name = "epe_checkbox_2a"
+label = "Check if applicable: Line 2a"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1f"
+name = "twenty_pct_ep"
+label = "20% EP from Form 4255"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1f(i)"
+name = "twenty_pct_ep_checkbox_1a"
+label = "Check if applicable: Line 1a"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1f(ii)"
+name = "twenty_pct_ep_checkbox_1c"
+label = "Check if applicable: Line 1c"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1f(iii)"
+name = "twenty_pct_ep_checkbox_1d"
+label = "Check if applicable: Line 1d"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1f(iv)"
+name = "twenty_pct_ep_checkbox_2a"
+label = "Check if applicable: Line 2a"
+type = "bool"
+required = false
+
+[[fields]]
+line = "1y"
+name = "other_additions_to_tax_type"
+label = "Other additions to tax. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "1y"
+name = "other_additions_to_tax"
+label = "Other additions to tax amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "1z"
+name = "total_additions"
+label = "Add lines 1a through 1y"
+type = "usd"
+
+[[fields]]
+line = "2"
+name = "amt"
+label = "Alternative minimum tax. Attach Form 6251"
+type = "usd"
+required = false
+
+[[fields]]
+line = "3"
+name = "total_part_1"
+label = "Add lines 1z and 2. Enter here and on Form 1040, line 17"
+type = "usd"
+
+# ── Part II — Other Taxes ──────────────────────────────────────────
+
+[[fields]]
+line = "4"
+name = "se_tax"
+label = "Self-employment tax. Attach Schedule SE"
+type = "usd"
+required = false
+
+[[fields]]
+line = "4"
+name = "se_tax_exempt_4361"
+label = "Check if exempt from self-employment tax: Form 4361"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4"
+name = "se_tax_exempt_4029"
+label = "Check if exempt from self-employment tax: Form 4029"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4"
+name = "se_tax_exempt_other"
+label = "Check if other exemption from self-employment tax"
+type = "bool"
+required = false
+
+[[fields]]
+line = "4"
+name = "se_tax_exempt_other_type"
+label = "Other exemption description"
+type = "string"
+required = false
+
+[[fields]]
+line = "5"
+name = "unreported_ss_medicare_4137"
+label = "Unreported social security and Medicare tax from Form 4137"
+type = "usd"
+required = false
+
+[[fields]]
+line = "6"
+name = "uncollected_ss_medicare_8919"
+label = "Uncollected social security and Medicare tax from Form 8919"
+type = "usd"
+required = false
+
+[[fields]]
+line = "7"
+name = "total_ss_medicare"
+label = "Total additional social security and Medicare tax. Add lines 5 and 6"
+type = "usd"
+
+[[fields]]
+line = "8"
+name = "additional_tax_ira"
+label = "Additional tax on IRAs, other qualified retirement plans, and other tax-favored accounts. Attach Form 5329 if required"
+type = "usd"
+required = false
+
+[[fields]]
+line = "8"
+name = "form_5329_not_required"
+label = "If Form 5329 is not required, check here"
+type = "bool"
+required = false
+
+[[fields]]
+line = "9"
+name = "household_employment_tax"
+label = "Household employment taxes. Attach Schedule H"
+type = "usd"
+required = false
+
+# Line 10 — Reserved for future use.
+
+[[fields]]
+line = "11"
+name = "additional_medicare_tax"
+label = "Additional Medicare tax. Attach Form 8959"
+type = "usd"
+required = false
+
+[[fields]]
+line = "12"
+name = "niit"
+label = "Net investment income tax. Attach Form 8960"
+type = "usd"
+required = false
+
+[[fields]]
+line = "13"
+name = "uncollected_ss_tips_life"
+label = "Uncollected social security and Medicare or RRTA tax on tips or group-term life insurance from Form W-2, box 12"
+type = "usd"
+required = false
+
+[[fields]]
+line = "14"
+name = "installment_interest_lots"
+label = "Interest on tax due on installment income from the sale of certain residential lots and timeshares"
+type = "usd"
+required = false
+
+[[fields]]
+line = "15"
+name = "installment_interest_150k"
+label = "Interest on the deferred tax on gain from certain installment sales with a sales price over $150,000"
+type = "usd"
+required = false
+
+[[fields]]
+line = "16"
+name = "recapture_low_income_housing"
+label = "Recapture of low-income housing credit. Attach Form 8611"
+type = "usd"
+required = false
+
+# ── Lines 17a–17z — Other additional taxes ─────────────────────────
+
+[[fields]]
+line = "17a"
+name = "recapture_other_credits_type"
+label = "Recapture of other credits. List type, form number, and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "17a"
+name = "recapture_other_credits"
+label = "Recapture of other credits amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17b"
+name = "recapture_mortgage_subsidy"
+label = "Recapture of federal mortgage subsidy"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17c"
+name = "additional_tax_hsa_dist"
+label = "Additional tax on HSA distributions. Attach Form 8889"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17d"
+name = "additional_tax_hsa_ineligible"
+label = "Additional tax for failure to remain eligible individual under section 223. Attach Form 8889"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17e"
+name = "additional_tax_archer_msa"
+label = "Additional tax on Archer MSA distributions. Attach Form 8853"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17f"
+name = "additional_tax_medicare_msa"
+label = "Additional tax on Medicare Advantage MSA distributions. Attach Form 8853"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17g"
+name = "recapture_charitable"
+label = "Recapture of a charitable contribution deduction"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17h"
+name = "nonqualified_deferred_comp"
+label = "Income from a nonqualified deferred compensation plan that fails to meet the requirements of section 409A"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17i"
+name = "compensation_nonqualified"
+label = "Compensation from a nonqualified deferred compensation plan described in section 457A"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17j"
+name = "section_72m5"
+label = "Section 72(m)(5) excess benefits tax"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17k"
+name = "golden_parachute"
+label = "Golden parachute payments"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17l"
+name = "accumulation_distribution_trusts"
+label = "Tax on accumulation distribution of trusts"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17m"
+name = "excise_insider_stock"
+label = "Excise tax on insider stock compensation from an expatriated corporation"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17n"
+name = "look_back_interest"
+label = "Look-back interest under section 167(g) or 460(b) from Form 8697 or 8866"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17o"
+name = "non_effectively_connected"
+label = "Tax on non-effectively connected income for any part of the year you were a nonresident alien"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17p"
+name = "interest_8621_16f"
+label = "Interest amount from Form 8621, line 16f"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17q"
+name = "interest_8621_24"
+label = "Interest amount from Form 8621, line 24"
+type = "usd"
+required = false
+
+[[fields]]
+line = "17z"
+name = "other_additional_taxes_type"
+label = "Any other taxes. List type and amount"
+type = "string"
+required = false
+
+[[fields]]
+line = "17z"
+name = "other_additional_taxes"
+label = "Any other taxes amount"
+type = "usd"
+required = false
+
+[[fields]]
+line = "18"
+name = "total_line_17"
+label = "Total additional taxes. Add lines 17a through 17z"
+type = "usd"
+
+[[fields]]
+line = "19"
+name = "recapture_net_epe_4255"
+label = "Recapture of net EPE from Form 4255"
+type = "usd"
+required = false
+
+[[fields]]
+line = "20"
+name = "section_965_installment"
+label = "Section 965 net tax liability installment from Form 965-A"
+type = "usd"
+required = false
+
+[[fields]]
+line = "21"
+name = "total_other_taxes"
+label = "Add lines 4, 7 through 16, 18, and 19. These are your total other taxes. Enter here and on Form 1040, line 23"
+type = "usd"
