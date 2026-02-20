@@ -4,7 +4,8 @@ use std::fmt;
 use us_tax_brackets::{self, FilingStatus, TaxYear};
 
 use crate::Usd;
-use crate::rules::TaxYearRules;
+use crate::rules::{DeductionParams, TaxYearRules};
+use crate::types::Filer;
 
 // ---------------------------------------------------------------------------
 // Ledger keys
@@ -40,8 +41,28 @@ pub type Ledger = BTreeMap<Key, Usd>;
 pub struct ReturnInput {
     pub tax_year: TaxYear,
     pub filing_status: FilingStatus,
+    pub taxpayer: Filer,
+    pub spouse: Option<Filer>,
+    pub is_dependent: bool,
+    pub is_dual_status_alien: bool,
+    pub spouse_itemizes: bool,
     pub w2_wages: Usd,
     pub fed_withholding: Usd,
+}
+
+impl ReturnInput {
+    fn deduction_params(&self) -> DeductionParams {
+        DeductionParams {
+            filing_status: self.filing_status,
+            taxpayer: self.taxpayer,
+            spouse: self.spouse,
+            is_dependent: self.is_dependent,
+            is_dual_status_alien: self.is_dual_status_alien,
+            spouse_itemizes: self.spouse_itemizes,
+            // TODO: include other earned income sources (self-employment, etc.)
+            earned_income: self.w2_wages,
+        }
+    }
 }
 
 // ---------------------------------------------------------------------------
@@ -109,7 +130,7 @@ pub fn compute_spine(rules: &dyn TaxYearRules, input: &ReturnInput) -> Result<Le
     let agi = total_income - adjustments;
 
     // TODO: choose between standard and itemized deductions (Schedule A)
-    let deductions = rules.standard_deduction(input.filing_status);
+    let deductions = rules.standard_deduction(&input.deduction_params());
     let taxable_income = (agi - deductions).max(Usd::ZERO);
 
     // compute_tax expects whole dollars; convert via IRS rounding.
@@ -174,6 +195,11 @@ mod tests {
         ReturnInput {
             tax_year: TaxYear::Y2025,
             filing_status: FilingStatus::Single,
+            taxpayer: Filer::default(),
+            spouse: None,
+            is_dependent: false,
+            is_dual_status_alien: false,
+            spouse_itemizes: false,
             w2_wages: Usd::from_dollars(wages),
             fed_withholding: Usd::from_dollars(withholding),
         }
@@ -184,6 +210,11 @@ mod tests {
         let inp = ReturnInput {
             tax_year: TaxYear::Y2024,
             filing_status: FilingStatus::Single,
+            taxpayer: Filer::default(),
+            spouse: None,
+            is_dependent: false,
+            is_dual_status_alien: false,
+            spouse_itemizes: false,
             w2_wages: Usd::from_dollars(50_000),
             fed_withholding: Usd::ZERO,
         };
