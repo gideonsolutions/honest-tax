@@ -112,6 +112,16 @@ impl Usd {
             Usd(rounded as i64)
         }
     }
+
+    /// Returns the larger of two `Usd` values.
+    pub const fn max(self, other: Self) -> Self {
+        if self.0 >= other.0 { self } else { other }
+    }
+
+    /// Returns the smaller of two `Usd` values.
+    pub const fn min(self, other: Self) -> Self {
+        if self.0 <= other.0 { self } else { other }
+    }
 }
 
 impl Add for Usd {
