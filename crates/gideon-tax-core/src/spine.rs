@@ -6,6 +6,7 @@ use us_tax_brackets::{self, FilingStatus, TaxYear};
 use crate::Usd;
 use crate::rules::{DeductionParams, TaxYearRules};
 use crate::types::Filer;
+use crate::types::{AdditionalIncome, Adjustments};
 
 // ---------------------------------------------------------------------------
 // Ledger keys
@@ -48,6 +49,8 @@ pub struct ReturnInput {
     pub spouse_itemizes: bool,
     pub w2_wages: Usd,
     pub fed_withholding: Usd,
+    pub additional_income: AdditionalIncome,
+    pub adjustments: Adjustments,
 }
 
 impl ReturnInput {
@@ -124,9 +127,8 @@ pub fn compute_spine(rules: &dyn TaxYearRules, input: &ReturnInput) -> Result<Le
     }
 
     // TODO: sum all income sources (interest, dividends, business, capital gains, etc.)
-    let total_income = input.w2_wages;
-    // TODO: Schedule 1 adjustments (educator expenses, HSA, IRA, student loan interest, etc.)
-    let adjustments = Usd::ZERO;
+    let total_income = input.w2_wages + input.additional_income.total();
+    let adjustments = input.adjustments.total();
     let agi = total_income - adjustments;
 
     // TODO: choose between standard and itemized deductions (Schedule A)
@@ -202,6 +204,8 @@ mod tests {
             spouse_itemizes: false,
             w2_wages: Usd::from_dollars(wages),
             fed_withholding: Usd::from_dollars(withholding),
+            additional_income: AdditionalIncome::default(),
+            adjustments: Adjustments::default(),
         }
     }
 
@@ -217,6 +221,8 @@ mod tests {
             spouse_itemizes: false,
             w2_wages: Usd::from_dollars(50_000),
             fed_withholding: Usd::ZERO,
+            additional_income: AdditionalIncome::default(),
+            adjustments: Adjustments::default(),
         };
         let err = compute_spine(&Rules2025, &inp).unwrap_err();
         assert!(matches!(
